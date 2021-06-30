@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AlcoolGasolina.View.MenuLateral"
+             xmlns:pages="clr-namespace:AlcoolGasolina.View">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#DCDCDC">
+            <StackLayout Orientation="Vertical">
+                <StackLayout BackgroundColor="#808080" HeightRequest="75">
+                    <Label Text="Controle Gasolina" FontSize="20"
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="White"
+                           HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <ListView x:Name="listview" SeparatorColor="#708090" RowHeight="55"
+                          BackgroundColor="#DCDCDC"
+                          ItemSelected="OnMenuItemSelected">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout VerticalOptions="FillAndExpand"
+                                             Orientation="Horizontal"
+                                             Padding="20,10,0,10" Spacing="20" BackgroundColor="#DCDCDC">
+                                    <Image Source="{Binding Icon}"
+                                           WidthRequest="50" HeightRequest="50"
+                                           VerticalOptions="Center"/>
+
+                                    <Label Text="{Binding Title}"
+                                           FontSize="Medium"
+                                           VerticalOptions="Center"
+                                           TextColor="Black"/>
+                                </StackLayout>
+                            </ViewCell>
+                            <!--<TextCell Text="{Binding Nome}"
+                          Detail="{Binding Pontos}"
+                          TextColor="Black"
+                          DetailColor="Black"
+                          />-->
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+        <!--<pages:MenuLateralMaster x:Name="MasterPage" />-->
+    </MasterDetailPage.Master>
+</MasterDetailPage>

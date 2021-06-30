@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:AlcoolGasolina.Util"
+             mc:Ignorable="d"
+             x:Class="AlcoolGasolina.View.UmCombustivel">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Margin="10">
+                <Label Text="Inserir as informações" Style="{StaticResource LabelPreto}"
+                HorizontalOptions="Center"
+                FontSize="24" />
+
+                <Label Text="Valor do Combustível" Style="{StaticResource LabelPreto}"/>
+                <!--, Converter={StaticResource Key=ConverteMoeda}-->
+                <Entry Keyboard="Numeric" TextChanged="Combustivel_TextChanged" x:Name="Combustivel" Placeholder="R$ 0.000,00" Text="{Binding ValorCombustivel}">
+                    <Entry.Behaviors>
+                        <local:MascaraMoeda/>
+                    </Entry.Behaviors>
+                </Entry>
+                <Label Style="{StaticResource ValidationMessage}" Text="O campo do Combustível é obrigatório."/>
+
+                <Label Text="Quantos Km o carro faz com 1Lt de Combustível" Style="{StaticResource LabelPreto}"/>
+                <Entry Keyboard="Numeric" x:Name="KmViagemC" Placeholder="Digite" 
+                       Text="{Binding KmPorLitro}" />
+                <Label Style="{StaticResource ValidationMessage}" Text="Os Km's por litro é obrigatório."/>
+
+                <Label Text="Total de Km da viagem" Style="{StaticResource LabelPreto}"/>
+                <Entry Keyboard="Numeric" x:Name="KmViagemT" Placeholder="Digite" 
+                       Text="{Binding TotalViagem}" />
+                <Label Style="{StaticResource ValidationMessage}" Text="O total de km da viagem deve ser preenchida."/>
+                
+                <Button Text="Calcular" VerticalOptions="EndAndExpand" TextColor="WhiteSmoke" 
+                        BorderRadius="1" FontSize="Large" BackgroundColor="#212121"
+                        Command="{Binding ResultCommand}"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:Alcool="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="AlcoolGasolina.View.Resultado"
+             Title="Resultado do Cálculo"
+             >
+
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="#bdbdbd">
+            <StackLayout>
+                <Alcool:PancakeView BorderColor="BlanchedAlmond"
+                                    BackgroundColor="#212121"
+                                    HorizontalOptions="FillAndExpand"
+                                    CornerRadius="0,0,0,600">
+                    <StackLayout Spacing="0" 
+                                 WidthRequest="200" 
+                                 HeightRequest="200"
+                                 >
+                        <Image Source="bg.jpg" />
+                    </StackLayout>
+                </Alcool:PancakeView>
+                
+                <StackLayout Spacing="0" Margin="25,-50,25,0">
+
+                    <Frame BorderColor="Gray" Margin="0,0,0,30"
+                           CornerRadius="10"
+                           Padding="8" BackgroundColor="#bdbdbd">
+                        <StackLayout>
+                            <Label Text="Total do Álcool: " TextColor="#000000"/>
+                            <Label Text="{Binding MessageValAlcool}"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold" TextColor="Black"/>
+                            <BoxView Color="Gray"
+                                     HeightRequest="2"
+                                     HorizontalOptions="Fill" />
+                            <Label Text="{Binding MessageAlcool}"/>
+                            <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame BorderColor="Gray" Margin="0,0,0,30"
+                           CornerRadius="10"
+                           Padding="8" BackgroundColor="#bdbdbd">
+                        <StackLayout>
+                            <Label Text="Total da Gasolina: " TextColor="#000000"/>
+                            <Label Text="{Binding MessageValGasolina}"
+                                   FontSize="Medium"
+                                   FontAttributes="Bold" TextColor="Black"/>
+                            <BoxView Color="Gray"
+                                     HeightRequest="2"
+                                     HorizontalOptions="Fill" />
+                            <Label Text="{Binding MessageGasolina}"/>
+                            <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" Margin="10,0,10,10">
+                        <Button Text="  Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                            BorderRadius="15" FontSize="Medium"
+                            Command="{Binding VoltaInicio}"/>
+                        <Button Text="Recalcular" BackgroundColor="#424242" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                            BorderRadius="15" FontSize="Medium"
+                            Command="{Binding ResultCommand}"/>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

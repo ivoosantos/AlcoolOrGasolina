@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converterPack="clr-namespace:Xamarin.Forms.ConvertersPack;assembly=Xamarin.Forms.ConvertersPack"
+             mc:Ignorable="d"
+             x:Class="AlcoolGasolina.App">
+    <Application.Resources>
+        <Color x:Key="AppBackgroundColor">AliceBlue</Color>
+        <Color x:Key="NavigationBarColor">#1C1C1C</Color>
+        <Color x:Key="NavigationBarTextColor">White</Color>
+        <Color x:Key="NormalTextColor">Black</Color>
+        <Color x:Key="ButtonColorDefault">#d50000</Color>
+        <Color x:Key="FrameBackground">#e53935</Color>
+
+        <Style TargetType="{x:Type Frame}">
+            <Setter Property="BackgroundColor" Value="{StaticResource FrameBackground}" />
+        </Style>
+
+        <Style TargetType="{x:Type ScrollView}">
+            <Setter Property="Opacity" Value=".92" />
+        </Style>
+
+        <Style x:Key="ValidationMessage" TargetType="Label">
+            <Setter Property="FontSize" Value="Micro"/>
+            <Setter Property="FontAttributes" Value="Italic"/>
+        </Style>
+
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}" />
+            <Setter Property="BarTextColor"
+                    Value="{StaticResource NavigationBarTextColor}" />
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="BackgroundColor"
+                    Value="{StaticResource ButtonColorDefault}"/>
+        </Style>
+
+        <Style x:Key="LabelPreto" TargetType="Label">
+            <Setter Property="TextColor" Value="#000000"/>
+        </Style>
+
+        <ResourceDictionary>
+            <converterPack:CurrencyConverter x:Key="ConverteMoeda" />
+            <converterPack:DecimalConverter x:Key="ConverteKm" />
+        </ResourceDictionary>
+
+        <ResourceDictionary>
+            <Color x:Key="Primary">#ffffff</Color>
+            <Style TargetType="NavigationPage" x:Key="teste">
+                <Setter Property="BarBackgroundColor" Value="Black" />
+                <Setter Property="BarTextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+        
+    </Application.Resources>
+</Application>
