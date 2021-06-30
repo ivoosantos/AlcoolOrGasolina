@@ -1,4 +1,4 @@
-# AlcoolOrGasolina
+# Alcool/Gasolina
 App para saber se deve usar álcool ou gasolina, entre outras funcionalidades futuras.
 
 > ### Status: Developing
