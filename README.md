@@ -43,3 +43,4 @@ App para saber se deve usar álcool ou gasolina, entre outras funcionalidades fu
 
 + Calcular se compensa usar Álcool ou Gasolina
 + Calcular o custo da viagem combustível único
++ Mapas de Postos de Gasolina
