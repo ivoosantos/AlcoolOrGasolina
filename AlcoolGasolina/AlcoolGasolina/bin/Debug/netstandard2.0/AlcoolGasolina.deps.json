@@ -17,8 +17,7 @@
           "Xamarin.Forms.BehaviorValidationPack": "1.1.0",
           "Xamarin.Forms.ConvertersPack": "1.0.0",
           "Xamarin.Forms.MaskedEntry": "1.0.0",
-          "Xamarin.Forms.PancakeView": "2.0.1.698",
-          "Mono.Android": "0.0.0.0"
+          "Xamarin.Forms.PancakeView": "2.0.1.698"
         },
         "runtime": {
           "AlcoolGasolina.dll": {}
@@ -225,14 +224,6 @@
             "fileVersion": "2.0.1.0"
           }
         }
-      },
-      "Mono.Android/0.0.0.0": {
-        "runtime": {
-          "Mono.Android.dll": {
-            "assemblyVersion": "0.0.0.0",
-            "fileVersion": "0.0.0.0"
-          }
-        }
       }
     }
   },
@@ -395,11 +386,6 @@
       "sha512": "sha512-wjem1ckhesY3UoD+rEpg6mysRG85RcO7hrXcFWpq2fKyTL4YKuH8GTmaaL87q/lyhvk0GCRoJFLgYcOJWsUk5w==",
       "path": "xamarin.forms.pancakeview/2.0.1.698",
       "hashPath": "xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
-    },
-    "Mono.Android/0.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
