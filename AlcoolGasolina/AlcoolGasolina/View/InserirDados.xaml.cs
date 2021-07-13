@@ -22,14 +22,14 @@ namespace AlcoolGasolina.View
             KmViagem.Text = "";
         }
 
-        private void Alcool_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            AlcoolGasolina.Model.Armazenamento.ValAlcool = Alcool.Text;
-        }
+        //private void Alcool_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    AlcoolGasolina.Model.Armazenamento.ValAlcool = Alcool.Text;
+        //}
 
-        private void Gasolina_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            AlcoolGasolina.Model.Armazenamento.ValGasolina = Gasolina.Text;
-        }
+        //private void Gasolina_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    AlcoolGasolina.Model.Armazenamento.ValGasolina = Gasolina.Text;
+        //}
     }
 }

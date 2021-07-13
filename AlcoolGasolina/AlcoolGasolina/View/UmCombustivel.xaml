@@ -15,7 +15,7 @@
 
                 <Label Text="Valor do Combustível" Style="{StaticResource LabelPreto}"/>
                 <!--, Converter={StaticResource Key=ConverteMoeda}-->
-                <Entry Keyboard="Numeric" TextChanged="Combustivel_TextChanged" x:Name="Combustivel" Placeholder="R$ 0.000,00" Text="{Binding ValorCombustivel}">
+                <Entry Keyboard="Numeric" x:Name="Combustivel" Placeholder="R$ 0.000,00" Text="{Binding ValorCombustivel}">
                     <Entry.Behaviors>
                         <local:MascaraMoeda/>
                     </Entry.Behaviors>

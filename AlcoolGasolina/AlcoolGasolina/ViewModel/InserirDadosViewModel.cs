@@ -8,19 +8,58 @@ using System.Globalization;
 using AlcoolGasolina.Services;
 using System.Collections.ObjectModel;
 using AlcoolGasolina.View;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace AlcoolGasolina.ViewModel
 {
-    public class InserirDadosViewModel
+    public class InserirDadosViewModel : INotifyPropertyChanged
     {
         public Armazenamento Armazenamento { get; set; }
         public Command ResultadoCommand { get; set; }
-        public Decimal ValorAlcool { get; set; }
-        public Decimal ValorGasolina { get; set; }
+
+        private decimal valorAlcool;
+        public decimal ValorAlcool 
+        {
+            get { return valorAlcool; }
+            set
+            {
+                if (valorAlcool != value)
+                {
+                    valorAlcool = value;
+                    OnPropertyChanged(nameof(ValorAlcool));
+                }
+            } 
+        }
+
+        private Decimal valorGasolina;
+        public Decimal ValorGasolina 
+        {
+            get { return valorGasolina; }
+            set
+            {
+                if (valorGasolina != value)
+                {
+                    valorGasolina = value;
+                    OnPropertyChanged(nameof(ValorGasolina));
+                }
+            }
+        }
+
         public Decimal TotalDaViagem { get; set; }
         public Decimal KmGasolina { get; set; }
         public Decimal KmAlcool { get; set; }
         public string ErroMensagem { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
         public InserirDadosViewModel()
         {
@@ -33,8 +72,8 @@ namespace AlcoolGasolina.ViewModel
         {
             try
             {
-                ValorAlcool = Decimal.Parse(Armazenamento.ValAlcool.Replace("R$", "").Replace(" ", ""));
-                ValorGasolina = Decimal.Parse(Armazenamento.ValGasolina.Replace("R$", "").Replace(" ", ""));
+                //ValorAlcool = Decimal.Parse(Armazenamento.ValAlcool.Replace("R$", "").Replace(" ", ""));
+                //ValorGasolina = Decimal.Parse(Armazenamento.ValGasolina.Replace("R$", "").Replace(" ", ""));
 
                 if (ValorAlcool <= 0 && ValorGasolina <= 0)
                 {
