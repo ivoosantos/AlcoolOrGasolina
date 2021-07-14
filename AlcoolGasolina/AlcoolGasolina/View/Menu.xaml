@@ -52,6 +52,13 @@
                                 </StackLayout>
                             </ViewCell>
 
+                            <ViewCell Tapped="GoMapas">
+                                <StackLayout Padding="15,10" Orientation="Horizontal">
+                                    <Image Source="map_icon.png" WidthRequest="30" HeightRequest="35" />
+                                    <Label Text="Mapas" VerticalTextAlignment="Center" FontSize="Large"/>
+                                </StackLayout>
+                            </ViewCell>
+
                             <ViewCell Tapped="GoConfig">
                                 <StackLayout Padding="20,5" Orientation="Horizontal">
                                     <Image Source="configCar02.png" WidthRequest="25" HeightRequest="25" />

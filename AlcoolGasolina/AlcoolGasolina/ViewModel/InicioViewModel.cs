@@ -15,9 +15,6 @@ namespace AlcoolGasolina.ViewModel
 
         public InicioViewModel()
         {
-            //InicioCommand = new Command(IniciarConsulta);
-            
-            //var Imagem = ImageSource.FromResource("AlcoolGasolina.img.logo_gas.png");
         }
 
         public void IniciarConsulta()

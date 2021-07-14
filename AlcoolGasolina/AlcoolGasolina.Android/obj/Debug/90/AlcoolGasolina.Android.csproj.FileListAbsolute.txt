@@ -509,19 +509,9 @@ C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\andr
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.armeabi-v7a.o
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.x86.o
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.x86_64.o
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.Android.dll
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.Android.pdb
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina.apk
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina.aab
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.aab
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.apk
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.apk.idsig
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.dll
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.pdb
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\build.props
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\adb.props
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.csproj.AssemblyReference.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res.flag
@@ -539,7 +529,16 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\R.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\R.cs.flag
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.csproj.CoreCompileInputs.cache
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\XamlC.stamp
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.Android.dll
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.Android.pdb
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina.apk
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina.aab
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.aab
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.apk
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\com.companyname.alcoolgasolina-Signed.apk.idsig
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.dll
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\bin\Debug\AlcoolGasolina.pdb
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.csproj.AssemblyReference.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.csproj.CopyComplete
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.pdb
@@ -572,6 +571,9 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\caricon.gif
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\configcar02.png
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\iconcar.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\search_icon.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\map_icon.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\right_icon.png
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\AlcoolGasolina.Android.dll
@@ -595,6 +597,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\mscorlib.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\mscorlib.pdb
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\netstandard.dll
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\ServiceStack.Interfaces.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\System.Collections.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\System.ComponentModel.Composition.dll
@@ -757,10 +760,13 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DataChangeObserver.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DatePickerRendererBase_1.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\DragAndDropGestureHandler.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EdgeSnapHelper.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorEditText.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EditorRendererBase_1.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EllipseRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EllipseView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EmptyViewAdapter.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSingleSnapHelper.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\EndSnapHelper.java
@@ -790,6 +796,8 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericGlobalLayoutListener.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GenericMenuClickListener.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GestureManager_TapAndPanGestureDetector.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GradientStrokeDrawable_GradientShaderFactory.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GridLayoutSpanSizeLookup.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewAdapter_2.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\GroupableItemsViewRenderer_3.java
@@ -805,6 +813,8 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewAdapter_2.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ItemsViewRenderer_3.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LabelRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LineRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\LineView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewAdapter.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ListViewRenderer_Container.java
@@ -825,14 +835,23 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedFragment.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageExtensions_EmbeddedSupportFragment.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PageRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PathRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PathView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerEditText.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerManager_PickerListener.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PickerRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PlatformRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\Platform_DefaultRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PolygonRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PolygonView.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PolylineRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PolylineView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PositionalSmoothScroller.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\PowerSaveModeBroadcastReceiver.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ProgressBarRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RadioButtonRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RectangleRenderer.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RectView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\RefreshViewRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollHelper.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ScrollLayoutManager.java
@@ -842,6 +861,8 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewAdapter_2.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableItemsViewRenderer_3.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\SelectableViewHolder.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShapeRenderer_2.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShapeView.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellContentFragment.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ShellFlyoutRecyclerAdapter_ElementViewHolder.java
@@ -886,6 +907,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\TimePickerRendererBase_1.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_LongPressGestureListener.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewCellRenderer_ViewCellContainer_TapGestureListener.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ViewRenderer_2.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\VisualElementRenderer_1.java

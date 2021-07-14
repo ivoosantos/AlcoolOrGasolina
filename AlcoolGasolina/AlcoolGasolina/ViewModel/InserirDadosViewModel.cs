@@ -15,6 +15,8 @@ namespace AlcoolGasolina.ViewModel
 {
     public class InserirDadosViewModel : INotifyPropertyChanged
     {
+        Page page;
+        
         public Armazenamento Armazenamento { get; set; }
         
         private decimal valAlcool = 0m;
@@ -80,8 +82,9 @@ namespace AlcoolGasolina.ViewModel
             ResultadoCommand = new Command(VisualizarResultado);
         }
 
-        public InserirDadosViewModel()
+        public InserirDadosViewModel(Page page)
         {
+            this.page = page;
             Armazenamento = new Armazenamento();
 
             InitializeCommands();
@@ -101,7 +104,9 @@ namespace AlcoolGasolina.ViewModel
                 {
                     Armazenamento.Alcool = CalcularAlcool(valAlcool, KmAlcool, TotalDaViagem);
                     Armazenamento.Gasolina = CalcularGasolina(valGasolina, KmGasolina, TotalDaViagem);
-                    App.Current.MainPage = new NavigationPage(new View.Resultado());
+                    this.page.Navigation.PushAsync(new View.Resultado());
+
+                    //App.Current.MainPage = new NavigationPage(new View.Resultado());
                 }
             }
             catch (Exception ex)
@@ -153,6 +158,15 @@ namespace AlcoolGasolina.ViewModel
         {
             ValorAlcool = "0";
             ValorGasolina = "0";
+        }
+
+        public void OnAppearingViewModel(bool resetValues)
+        {
+            if (resetValues)
+            {
+                ValorAlcool = "0";
+                ValorGasolina = "0";
+            }
         }
     }
 }
