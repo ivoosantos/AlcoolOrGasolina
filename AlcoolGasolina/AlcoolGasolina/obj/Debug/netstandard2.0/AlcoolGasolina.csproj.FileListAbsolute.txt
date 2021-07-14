@@ -27,7 +27,6 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\ref\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\AlcoolGasolina.pdb
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Inicio.xaml.g.cs
@@ -44,3 +43,4 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\ref\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.pdb
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache

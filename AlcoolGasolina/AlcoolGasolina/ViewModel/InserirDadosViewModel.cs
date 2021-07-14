@@ -16,10 +16,12 @@ namespace AlcoolGasolina.ViewModel
     public class InserirDadosViewModel : INotifyPropertyChanged
     {
         public Armazenamento Armazenamento { get; set; }
-        public Command ResultadoCommand { get; set; }
+        
+        private decimal valAlcool = 0m;
+        private decimal valGasolina = 0m;
 
-        private decimal valorAlcool;
-        public decimal ValorAlcool 
+        private string valorAlcool;
+        public string ValorAlcool 
         {
             get { return valorAlcool; }
             set
@@ -28,12 +30,17 @@ namespace AlcoolGasolina.ViewModel
                 {
                     valorAlcool = value;
                     OnPropertyChanged(nameof(ValorAlcool));
+
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                        valAlcool = ConverterToDecimal(value);
+                    }
                 }
             } 
         }
 
-        private Decimal valorGasolina;
-        public Decimal ValorGasolina 
+        private string valorGasolina;
+        public string ValorGasolina 
         {
             get { return valorGasolina; }
             set
@@ -42,6 +49,11 @@ namespace AlcoolGasolina.ViewModel
                 {
                     valorGasolina = value;
                     OnPropertyChanged(nameof(ValorGasolina));
+
+                    if (!string.IsNullOrEmpty(value))
+                    {
+                       valGasolina = ConverterToDecimal(value);
+                    }
                 }
             }
         }
@@ -61,31 +73,34 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
+        public Command ResultadoCommand { get; set; }
+
+        private void InitializeCommands()
+        {
+            ResultadoCommand = new Command(VisualizarResultado);
+        }
+
         public InserirDadosViewModel()
         {
             Armazenamento = new Armazenamento();
 
-            ResultadoCommand = new Command(VisualizarResultado);
+            InitializeCommands();
+            SetInitialValues();
         }
 
         public void VisualizarResultado()
         {
             try
             {
-                //ValorAlcool = Decimal.Parse(Armazenamento.ValAlcool.Replace("R$", "").Replace(" ", ""));
-                //ValorGasolina = Decimal.Parse(Armazenamento.ValGasolina.Replace("R$", "").Replace(" ", ""));
-
-                if (ValorAlcool <= 0 && ValorGasolina <= 0)
+                if (valAlcool <= 0 && valGasolina <= 0)
                 {
                     Armazenamento.MensagemErro = "O valor do álcool ou gasolina não pode ser 0(zero)!";
                     App.Current.MainPage.DisplayAlert("Atenção!", Armazenamento.MensagemErro, "OK");
                 }
                 else
                 {
-                    Armazenamento.Alcool = CalcularAlcool(ValorAlcool, KmAlcool, TotalDaViagem);
-                    Armazenamento.Gasolina = CalcularGasolina(ValorGasolina, KmGasolina, TotalDaViagem);
-                    //App.Current.MainPage.Navigation.PopModalAsync();
-                    //App.Current.MainPage.Navigation.PushModalAsync(new Resultado(), true);
+                    Armazenamento.Alcool = CalcularAlcool(valAlcool, KmAlcool, TotalDaViagem);
+                    Armazenamento.Gasolina = CalcularGasolina(valGasolina, KmGasolina, TotalDaViagem);
                     App.Current.MainPage = new NavigationPage(new View.Resultado());
                 }
             }
@@ -117,6 +132,27 @@ namespace AlcoolGasolina.ViewModel
                 Retorno = vG * div;
 
             return (Decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo("pt-BR"))));
+        }
+
+        private decimal ConverterToDecimal(string str)
+        {
+            decimal result = 0m;
+            if (decimal.TryParse(str.Replace("R$", "").Trim(), out result))
+            {
+                result = decimal.Parse(str.Replace("R$", ""), new CultureInfo("pt-BR"));
+            }
+            else
+            {
+                result = 0m;
+            }
+
+            return result;
+        }
+
+        private void SetInitialValues()
+        {
+            ValorAlcool = "0";
+            ValorGasolina = "0";
         }
     }
 }

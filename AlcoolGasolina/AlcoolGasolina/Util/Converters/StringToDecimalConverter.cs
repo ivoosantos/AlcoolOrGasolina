@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Text;
 using Xamarin.Forms;
 
-namespace AlcoolGasolina.Util
+namespace AlcoolGasolina.Util.Converters
 {
-    public class Converters : IValueConverter
+    public class StringToDecimalConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -27,12 +28,24 @@ namespace AlcoolGasolina.Util
             decimal intValue;
             decimal? result = null;
 
-            if (decimal.TryParse(stringValue, out intValue))
+            if (stringValue.Contains("R$"))
+                stringValue = stringValue.Replace("R$", "");
+
+            try
             {
-                result = new Nullable<decimal>(intValue);
+                result = System.Convert.ToDecimal(stringValue, new System.Globalization.CultureInfo("pt-BR"));
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.Message);
             }
 
             return result;
+
+            //if (decimal.TryParse(stringValue, out intValue))
+            //{
+            //    result = new Nullable<decimal>(intValue);
+            //}
         }
     }
 }

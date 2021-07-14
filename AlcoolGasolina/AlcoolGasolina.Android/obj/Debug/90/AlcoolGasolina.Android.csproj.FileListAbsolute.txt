@@ -536,6 +536,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\35\jl\files.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\39\jl\files.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\41\jl\files.cache
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\R.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\R.cs.flag
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\AlcoolGasolina.Android.csproj.CoreCompileInputs.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\XamlC.stamp
@@ -571,7 +572,6 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\caricon.gif
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\configcar02.png
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\iconcar.png
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\R.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\AlcoolGasolina.Android.dll
@@ -588,7 +588,6 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\GalaSoft.MvvmLight.Platform.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\GalaSoft.MvvmLight.Platform.dll.mdb
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\Java.Interop.dll
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\machine.config
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\Mono.Android.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\Mono.Android.pdb
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\Mono.Security.dll
@@ -703,6 +702,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\AndroidManifest.xml
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\__environment__.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\mono\MonoRuntimeProvider.java
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\machine.config
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\bin\mono.android.jar
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\static.flag
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\buildid.txt
@@ -725,7 +725,6 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\android\support\v7\cardview\R.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\android\support\v7\recyclerview\R.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\android\support\v7\widget\Toolbar_NavigationOnClickEventDispatcher.java
-C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\com\companyname\alcoolgasolina\R.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc6414252951f3f66c67\RecyclerViewScrollListener_2.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActionSheetRenderer.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc643f46942d9dd1fff9\ActivityIndicatorRenderer.java
@@ -992,6 +991,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\mono\MonoPackageManager_Resources.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\xamarin\essentials\fileProvider.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\bin\packaged_resources
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\com\companyname\alcoolgasolina\R.java
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.arm64-v8a.s
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.armeabi-v7a.s
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\compressed_assemblies.x86.s
