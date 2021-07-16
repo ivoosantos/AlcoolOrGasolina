@@ -39,9 +39,9 @@ namespace App5.Services
 
         private async Task GetDeviceLocation()
         {
-			try
-			{
-				var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
+            try
+            {
+                var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
 
 				latitude = location.Latitude;
 				longitude = location.Longitude;
@@ -51,7 +51,7 @@ namespace App5.Services
 			catch (Exception ex)
 			{
                 Debug.WriteLine(ex.Message);
-			}
+            }
         }
     }
 }
