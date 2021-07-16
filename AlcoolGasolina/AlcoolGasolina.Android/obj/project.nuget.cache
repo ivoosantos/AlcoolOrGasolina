@@ -56,12 +56,5 @@
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.maskedentry\\1.0.0\\xamarin.forms.maskedentry.1.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
