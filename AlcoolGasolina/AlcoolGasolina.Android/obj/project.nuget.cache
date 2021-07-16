@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Y1FCn8j5GY5eNx/ExMI6NvsL9/JxVW92m4eBk18Wc8HEubCHmNGKBwaxo48keCCmQ72+ytCzgo+DjqA/Ac2IbA==",
+  "dgSpecHash": "t4Tg89WOEOsz95mEG3tT1fPlzX2vVhzCMQ0cNhlXQ1WSZpcYarq2tys8D7i26ht4o+MhrWVElHaNnvsu9sKIvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\rg.plugins.popup\\2.0.0.12\\rg.plugins.popup.2.0.0.12.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\servicestack.interfaces\\5.9.0\\servicestack.interfaces.5.9.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
