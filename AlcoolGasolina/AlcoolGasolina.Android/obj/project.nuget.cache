@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "IOvW38hfHipeFl+GkWvsB25M3A72dHWdHiJd6SKv4+qdpc0CoEDPiherwiVtwaVne2h1a5jpevDDnHRMjgBaOg==",
+  "dgSpecHash": "ZRXDbPt+4P+xA3/FMx5Gl0+M6aVP9J/QFAL6lgUPYgmt5t7p9uXJXl3Er1vH1KlnYjcCLRbazkaX9YdWWomxZQ==",
   "success": true,
   "projectFilePath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ivoos\\.nuget\\packages\\commonservicelocator\\2.0.2\\commonservicelocator.2.0.2.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\mvvmlightlibs\\5.4.1.1\\mvvmlightlibs.5.4.1.1.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\rg.plugins.popup\\2.0.0.12\\rg.plugins.popup.2.0.0.12.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\servicestack.interfaces\\5.9.0\\servicestack.interfaces.5.9.0.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

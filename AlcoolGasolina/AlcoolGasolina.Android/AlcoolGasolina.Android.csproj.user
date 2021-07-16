@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>Samsung SM-A510M</SelectedDevice>
-    <DefaultDevice>Android_Accelerated_x86_Nougat</DefaultDevice>
+    <SelectedDevice>emulador_one</SelectedDevice>
+    <DefaultDevice>emulador_one</DefaultDevice>
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
-    <ActiveDebugProfile>Samsung SM-A510M</ActiveDebugProfile>
+    <ActiveDebugProfile>emulador_one</ActiveDebugProfile>
   </PropertyGroup>
 </Project>
