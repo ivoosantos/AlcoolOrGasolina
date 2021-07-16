@@ -1950,12 +1950,6 @@
   },
   "logs": [
     {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'logs[0]', line 34, position 0."
-    },
-    {
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
