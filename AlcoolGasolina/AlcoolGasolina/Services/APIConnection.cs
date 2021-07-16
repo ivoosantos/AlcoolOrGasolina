@@ -15,15 +15,15 @@ namespace App5.Services
         double longitude = 0;
         private const string myKey = "AIzaSyCAF_Sp4FTfSt0TZlPCyx5KhnAYs48-rVQ";
 
+        string testeLat = null;
+        string testeLong = null;
         public async Task<T> GetAsync(string distancia)
         {
             try
             {
                 await GetDeviceLocation();
-                string googlePlaceUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={latitude},{longitude}&radius={distancia}&types=gas_station&name=&key={myKey}";
-
-                googlePlaceUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-23.4746128,-46.7120028&radius=5000&types=gas_station&name=&key=AIzaSyCAF_Sp4FTfSt0TZlPCyx5KhnAYs48-rVQ";
-
+                string googlePlaceUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={testeLat},{testeLong}&radius={distancia}&types=gas_station&name=&key={myKey}";
+                
                 var httpClient = new HttpClient();
                 var json = await httpClient.GetStringAsync(googlePlaceUrl);
                 var results = JsonConvert.DeserializeObject<T>(json);
@@ -43,11 +43,13 @@ namespace App5.Services
             {
                 var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
 
-                latitude = location.Latitude;
-                longitude = location.Longitude;
-            }
-            catch (Exception ex)
-            {
+				latitude = location.Latitude;
+				longitude = location.Longitude;
+                testeLat = latitude.ToString().Replace(",", ".");
+                testeLong = longitude.ToString().Replace(",", ".");
+			}
+			catch (Exception ex)
+			{
                 Debug.WriteLine(ex.Message);
             }
         }
