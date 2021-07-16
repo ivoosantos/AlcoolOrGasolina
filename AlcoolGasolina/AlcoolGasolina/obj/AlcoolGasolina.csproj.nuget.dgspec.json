@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {}
+    "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {
+    "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
+        "projectUniqueName": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
         "projectName": "AlcoolGasolina",
-        "projectPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
-        "packagesPath": "C:\\Users\\Gabriel Juren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\obj\\",
+        "projectPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
+        "packagesPath": "C:\\Users\\ivoos\\.nuget\\packages\\",
+        "outputPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Gabriel Juren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivoos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -99,7 +100,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

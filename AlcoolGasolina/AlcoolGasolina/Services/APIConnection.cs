@@ -15,13 +15,15 @@ namespace App5.Services
         double longitude = 0;
         private const string myKey = "AIzaSyCAF_Sp4FTfSt0TZlPCyx5KhnAYs48-rVQ";
 
+        string testeLat = null;
+        string testeLong = null;
         public async Task<T> GetAsync(string distancia)
         {
             try
             {
                 await GetDeviceLocation();
-                string googlePlaceUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={latitude},{longitude}&radius={distancia}&types=gas_station&name=&key={myKey}";
-
+                string googlePlaceUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={testeLat},{testeLong}&radius={distancia}&types=gas_station&name=&key={myKey}";
+                
                 var httpClient = new HttpClient();
                 var json = await httpClient.GetStringAsync(googlePlaceUrl);
                 var results = JsonConvert.DeserializeObject<T>(json);
@@ -43,6 +45,8 @@ namespace App5.Services
 
 				latitude = location.Latitude;
 				longitude = location.Longitude;
+                testeLat = latitude.ToString().Replace(",", ".");
+                testeLong = longitude.ToString().Replace(",", ".");
 			}
 			catch (Exception ex)
 			{
