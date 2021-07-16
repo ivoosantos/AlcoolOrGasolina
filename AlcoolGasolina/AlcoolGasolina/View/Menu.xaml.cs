@@ -20,19 +20,22 @@ namespace AlcoolGasolina.View
 
         private void GoHome(object sender, System.EventArgs e)
         {
-            Detail.Navigation.PushAsync(new Inicio());
+            //Detail.Navigation.PushAsync(new Inicio());
+            Detail = new NavigationPage(new Inicio());
             IsPresented = false;
         }
         private void GoFlex(object sender, System.EventArgs e)
         {
-            Detail.Navigation.PushAsync(new InserirDados());
+            Detail = new NavigationPage(new InserirDados());
             IsPresented = false;
+            //Detail.Navigation.PushAsync(new InserirDados());
+
         }
         private void GoNormal(object sender, System.EventArgs e)
         {
-            //DisplayAlert("Atenção!", "Página em construção...", "OK");
-            Detail.Navigation.PushAsync(new UmCombustivel());
+            Detail = new NavigationPage(new UmCombustivel());
             IsPresented = false;
+            //Detail.Navigation.PushAsync(new UmCombustivel());
         }
 
         private void GoConfig(object sender, System.EventArgs e)
@@ -45,6 +48,12 @@ namespace AlcoolGasolina.View
         private void Sair(object sender, System.EventArgs e)
         {
             App.Current.Quit();
+            IsPresented = false;
+        }
+
+        private void GoMapas(object sender, System.EventArgs e)
+        {
+            Detail = new NavigationPage(new MapasView());
             IsPresented = false;
         }
     }

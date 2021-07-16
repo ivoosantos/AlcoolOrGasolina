@@ -58,11 +58,17 @@
                         </StackLayout>
                     </Frame>
 
-                    <StackLayout Orientation="Horizontal" Margin="10,0,10,10">
-                        <Button Text="  Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                    <StackLayout 
+                        Orientation="Horizontal" 
+                        Margin="10,0,10,10">
+                        <!--<Button Text="Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
-                            Command="{Binding VoltaInicio}"/>
-                        <Button Text="Recalcular" BackgroundColor="#424242" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                            Command="{Binding VoltaInicio}"/>-->
+                        <Button 
+                            Text="Recalcular" 
+                            BackgroundColor="#424242"
+                            HorizontalOptions="FillAndExpand" 
+                            TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
                             Command="{Binding ResultCommand}"/>
                     </StackLayout>

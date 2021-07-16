@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using System.Globalization;
+using AlcoolGasolina.View;
 
 namespace AlcoolGasolina.ViewModel
 {
     public class ResultadoViewModel : Armazenamento
     {
+        Page Page;
         public Armazenamento Armazenamento { get; set; }
-        public Command ResultCommand { get; set; }
-        public Command VoltaInicio { get; set; }
         public string Message { get; set; }
         public Decimal ValorAlcool { get; set; }
         public Decimal ValorGasolina { get; set; }
@@ -20,11 +20,21 @@ namespace AlcoolGasolina.ViewModel
         public string MessageValAlcool { get; set; }
         public string MessageValGasolina { get; set; }
 
-        public ResultadoViewModel()
+        public Command ResultCommand { get; set; }
+        public Command VoltaInicio { get; set; }
+
+        private void InitializeCommands()
         {
-            MostrarResultado();
             ResultCommand = new Command(NovaConsulta);
             VoltaInicio = new Command(VoltarInicio);
+        }
+
+        public ResultadoViewModel(Page page)
+        {
+            this.Page = page;
+
+            InitializeCommands();
+            MostrarResultado();
         }
 
         public void MostrarResultado()
@@ -58,11 +68,10 @@ namespace AlcoolGasolina.ViewModel
 
         public void NovaConsulta()
         {
+            InserirDados.resetValues = true;
+            this.Page.Navigation.PopAsync();
 
-            //App.Current.MainPage.Navigation.PopModalAsync(true);
-            //(App.Current.MainPage).Navigation.PushModalAsync(new View.InserirDados(),true);
-            //App.Current.MainPage = new View.InserirDados();
-            App.Current.MainPage = new NavigationPage(new View.InserirDados());
+            //App.Current.MainPage = new NavigationPage(new View.InserirDados());
         }
         public void VoltarInicio()
         {

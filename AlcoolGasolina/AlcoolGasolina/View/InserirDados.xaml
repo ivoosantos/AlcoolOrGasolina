@@ -6,56 +6,97 @@
              xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry"
              xmlns:converterPack="clr-namespace:Xamarin.Forms.ConvertersPack;assembly=Xamarin.Forms.ConvertersPack"
              xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
-             xmlns:local="clr-namespace:AlcoolGasolina.Util"
+             xmlns:local="clr-namespace:AlcoolGasolina.Util" xmlns:viewmodel="clr-namespace:AlcoolGasolina.ViewModel" x:DataType="viewmodel:InserirDadosViewModel"
+             xmlns:localConverter="clr-namespace:AlcoolGasolina.Util.Converters"
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.InserirDados"
              Title="Carro Flex">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <ContentPage.Content>
-        <ScrollView BackgroundColor="White">
-            <StackLayout Spacing="0" Margin="10">
-                <Label Text="Inserir as informações" Style="{StaticResource LabelPreto}"
-                HorizontalOptions="Center"
-                FontSize="24" />
-                <Label Text="Valor do Álcool" Style="{StaticResource LabelPreto}"/> <!--, Converter={StaticResource Key=ConverteMoeda}-->
-                <Entry Keyboard="Numeric" TextChanged="Alcool_TextChanged" x:Name="Alcool" Placeholder="R$ 0.000,00" Text="{Binding ValorAlcool}">
+        <ScrollView
+            BackgroundColor="White">
+            <StackLayout 
+                Spacing="0" 
+                Margin="10">
+                <Label 
+                    Text="Inserir as informações" Style="{StaticResource LabelPreto}"
+                    HorizontalOptions="Center"
+                    FontSize="24" />
+                <Label
+                    Text="Valor do Álcool" 
+                    Style="{StaticResource LabelPreto}"/>
+                <Entry 
+                    Keyboard="Numeric"
+                    x:Name="Alcool"
+                    Placeholder="R$ 0.000,00" 
+                    Text="{Binding ValorAlcool, Mode=TwoWay}">
                     <Entry.Behaviors>
                         <local:MascaraMoeda/>
                     </Entry.Behaviors>
                 </Entry>
-                <Label x:Name="AlcoolMsg" Style="{StaticResource ValidationMessage}" Text="O campo álcool é obrigatório."/>
-
-                <Label Text="Quantos Km o carro faz com 1Lt de Álcool?" Style="{StaticResource LabelPreto}"/>
-                <Entry Keyboard="Numeric" x:Name="KmViagemA" Placeholder="Digite"
-                       Text="{Binding KmAlcool}" />
-
-                <Label Text="Valor da Gasolina" Style="{StaticResource LabelPreto}"/>
-                <Entry Keyboard="Numeric" x:Name="Gasolina" TextChanged="Gasolina_TextChanged" Placeholder="R$ 0.000,00" Text="{Binding ValorGasolina}">
+                <Label 
+                    x:Name="AlcoolMsg"
+                    Style="{StaticResource ValidationMessage}" 
+                    Text="O campo álcool é obrigatório."/>
+                <Label 
+                    Text="Quantos Km o carro faz com 1Lt de Álcool?"
+                    Style="{StaticResource LabelPreto}"/>
+                <Entry 
+                    Keyboard="Numeric" 
+                    x:Name="KmViagemA" 
+                    Placeholder="Digite"
+                    Text="{Binding KmAlcool}" />
+                <Label 
+                    Text="Valor da Gasolina"
+                    Style="{StaticResource LabelPreto}"/>
+                <Entry 
+                    Keyboard="Numeric" 
+                    x:Name="Gasolina"
+                    Placeholder="R$ 0.000,00" 
+                    Text="{Binding ValorGasolina, Mode=TwoWay}">
                     <Entry.Behaviors>
                         <local:MascaraMoeda/>
                     </Entry.Behaviors>
                 </Entry>
-                <Label x:Name="GasolinaMsg" Style="{StaticResource ValidationMessage}" Text="O campo gasolina é obrigatório."/>
-
-                <Label Text="Quantos Km o carro faz com 1Lt de Gasolina?" Style="{StaticResource LabelPreto}"/>
-                <Entry Keyboard="Numeric" x:Name="KmViagemG" Placeholder="Digite" 
-                       Text="{Binding KmGasolina}" />
-
-                <Label Text="Total de Km da viagem" Style="{StaticResource LabelPreto}"/>
-                <Entry Keyboard="Numeric" x:Name="KmViagem" Placeholder="Digite" 
-                       Text="{Binding TotalDaViagem}" />
-
-                <Label x:Name="KmViagemMsg" Style="{StaticResource ValidationMessage}" Text="O total de km da viagem deve ser preenchida."/>
-
-                <!--<Label Text="Teste"/> -->
-                <!--Command="{Binding ResultadoCommand}"-->
-                <!--<control:MaskedEntry Placeholder="Teste" Mask="X,XX" ReturnType="Default" Keyboard="Numeric" Text="{Binding TotalDaViagem}"></control:MaskedEntry>-->
-
-                <Button Text="Calcular" VerticalOptions="EndAndExpand" TextColor="WhiteSmoke" 
-                        BorderRadius="1" FontSize="Large" BackgroundColor="#212121"
-                        Command="{Binding ResultadoCommand}"/>
+                <Label 
+                    x:Name="GasolinaMsg" 
+                    Style="{StaticResource ValidationMessage}" 
+                    Text="O campo gasolina é obrigatório."/>
+                <Label 
+                    Text="Quantos Km o carro faz com 1Lt de Gasolina?"
+                    Style="{StaticResource LabelPreto}"/>
+                <Entry 
+                    Keyboard="Numeric" 
+                    x:Name="KmViagemG"
+                    Placeholder="Digite" 
+                    Text="{Binding KmGasolina}" />
+                <Label 
+                    Text="Total de Km da viagem"
+                    Style="{StaticResource LabelPreto}"/>
+                <Entry 
+                    Keyboard="Numeric" 
+                    x:Name="KmViagem" 
+                    Placeholder="Digite" 
+                    Text="{Binding TotalDaViagem}" />
+                <Label 
+                    x:Name="KmViagemMsg"
+                    Style="{StaticResource ValidationMessage}"
+                    Text="O total de km da viagem deve ser preenchida."/>
+                <Button 
+                    Text="Calcular"
+                    VerticalOptions="EndAndExpand" 
+                    TextColor="WhiteSmoke" 
+                    BorderRadius="1" 
+                    FontSize="Large"
+                    BackgroundColor="#212121"
+                    Command="{Binding ResultadoCommand}"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
-    
 </ContentPage>

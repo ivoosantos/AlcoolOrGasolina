@@ -13,23 +13,43 @@ namespace AlcoolGasolina.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class InserirDados : ContentPage
     {
+        public static bool resetValues = false;
+        InserirDadosViewModel inserirDadosViewModel;
+
         public InserirDados()
         {
             InitializeComponent();
-            BindingContext = new InserirDadosViewModel();
+            inserirDadosViewModel = new InserirDadosViewModel(this);
+            BindingContext = inserirDadosViewModel;
+
             KmViagemA.Text = "";
             KmViagemG.Text = "";
             KmViagem.Text = "";
         }
 
-        private void Alcool_TextChanged(object sender, TextChangedEventArgs e)
+        protected override void OnAppearing()
         {
-            AlcoolGasolina.Model.Armazenamento.ValAlcool = Alcool.Text;
-        }
+            if (resetValues)
+            {
+                inserirDadosViewModel.OnAppearingViewModel(resetValues);
 
-        private void Gasolina_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            AlcoolGasolina.Model.Armazenamento.ValGasolina = Gasolina.Text;
+                KmViagemA.Text = "";
+                KmViagemG.Text = "";
+                KmViagem.Text = "";
+
+                resetValues = false;
+            }
+            
+            base.OnAppearing();
         }
+        //private void Alcool_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    AlcoolGasolina.Model.Armazenamento.ValAlcool = Alcool.Text;
+        //}
+
+        //private void Gasolina_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    AlcoolGasolina.Model.Armazenamento.ValGasolina = Gasolina.Text;
+        //}
     }
 }

@@ -15,7 +15,7 @@ namespace AlcoolGasolina.View
         public Resultado()
         {
             InitializeComponent();
-            BindingContext = new ViewModel.ResultadoViewModel();
+            BindingContext = new ViewModel.ResultadoViewModel(this);
         }
     }
 }

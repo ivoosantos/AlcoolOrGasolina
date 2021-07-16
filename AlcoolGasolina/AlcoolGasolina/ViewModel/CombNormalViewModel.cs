@@ -1,25 +1,99 @@
 ﻿using AlcoolGasolina.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
 
 namespace AlcoolGasolina.ViewModel
 {
-    public class CombNormalViewModel
+    public class CombNormalViewModel : INotifyPropertyChanged
     {
+        private string messageCombustivel;
+        public string MessageCombustivel
+        {
+            get { return messageCombustivel; }
+            set
+            {
+                if (messageCombustivel != value)
+                {
+                    messageCombustivel = value;
+                    OnPropertyChanged(nameof(MessageCombustivel));
+                }
+            }
+        }
+
+        public string MessageCompensa 
+        {
+            get { return "Este é o valor que você \n vai gastar para sua viagem!"; }
+        }
+
+        private Decimal valorCombustivel;
+        public Decimal ValorCombustivel
+        {
+            get { return valorCombustivel; }
+            set
+            {
+                if (valorCombustivel != value)
+                {
+                    valorCombustivel = value;
+                    OnPropertyChanged(nameof(ValorCombustivel));
+                }
+            }
+        }
+
+        private Decimal infoKmPorLitro;
+        public Decimal InfoKmPorLitro
+        {
+            get { return infoKmPorLitro; }
+            set
+            {
+                if (infoKmPorLitro != value)
+                {
+                    infoKmPorLitro = value;
+                    OnPropertyChanged(nameof(InfoKmPorLitro));
+                }
+            }
+        }
+
+        private Decimal infoKmTotalViagem;
+        public Decimal InfoKmTotalViagem
+        {
+            get { return infoKmTotalViagem; }
+            set
+            {
+                if (infoKmTotalViagem != value)
+                {
+                    infoKmTotalViagem = value;
+                    OnPropertyChanged(nameof(InfoKmPorLitro));
+                }
+            }
+        }
+
         public Command NewConsult { get; set; }
+        
         public Command BackInicio { get; set; }
-        public string MessageCombustivel { get; set; }
-        public string MessageCompensa { get; set; }
-        public Decimal ValorCombustivel { get; set; }
-        public Decimal InfoKmPorLitro { get; set; }
-        public Decimal InfoKmTotalViagem { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
 
         public CombNormalViewModel()
         {
             Resultado();
+            InitializeCommand();
+        }
+
+        private void InitializeCommand()
+        {
             BackInicio = new Command(VoltarInicio);
             NewConsult = new Command(NovaConsulta);
         }
@@ -29,7 +103,7 @@ namespace AlcoolGasolina.ViewModel
             ValorCombustivel = Decimal.Parse(Armazenamento.ValorCombustivel.ToString("F", CultureInfo.GetCultureInfo("pt-BR")));
 
             MessageCombustivel = "R$ " + ValorCombustivel;
-            MessageCompensa = "Este é o valor que você \n vai gastar para sua viagem!";
+            //MessageCompensa = "Este é o valor que você \n vai gastar para sua viagem!";
         }
 
         public void NovaConsulta()
