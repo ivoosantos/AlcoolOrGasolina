@@ -42,7 +42,6 @@ namespace AlcoolGasolina.ViewModel
                     selectedItemPicker = value;
                     NotifyPropertyChanged(nameof(SelectedItemPicker));
 
-
                     _ = PesquisarClick();
                 }
             }
@@ -101,7 +100,9 @@ namespace AlcoolGasolina.ViewModel
                 if (resultSelected != value)
                 {
                     resultSelected = value;
-                    _ = GetSelectedItem(value);
+
+                    if (value != null)
+                        _ = GetSelectedItem(value);
                 }
             }
         }
@@ -213,16 +214,9 @@ namespace AlcoolGasolina.ViewModel
             };
 
             await Map.OpenAsync(value.geometry.location.lat, value.geometry.location.lng, options);
+            ResultSelected = null;
         }
 
-        //public override void DisableNavigationBar(Page page)
-        //{
-        //	base.DisableNavigationBar(page);
-        //}
-        //public override void GenericException(Page page)
-        //{
-        //	base.GenericException(page);
-        //}
         public void StartLoading()
         {
             IsLoading = true;

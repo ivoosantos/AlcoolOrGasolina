@@ -12,12 +12,6 @@
              x:Class="AlcoolGasolina.View.InserirDados"
              Title="Carro Flex">
     
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <ScrollView
             BackgroundColor="White">

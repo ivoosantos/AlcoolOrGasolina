@@ -27,5 +27,15 @@ namespace AlcoolGasolina.View
             locaisListViewModel.OnAppearingViewModel();
             base.OnAppearing();
         }
+
+        private void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            CollectionView cView = sender as CollectionView;
+
+            if (cView.SelectedItem != null)
+            {
+                cView.SelectedItem = null;
+            }
+        }
     }
 }

@@ -62,8 +62,9 @@
                             Margin="0,5,0,0"
                             SelectionMode="Single"
                             Grid.Row="3"
-                            SelectedItem="{Binding ResultSelected, Mode=TwoWay}"
-                            ItemsSource="{Binding Locais}">
+                            SelectedItem="{Binding ResultSelected}"
+                            ItemsSource="{Binding Locais}"
+                            SelectionChanged="CollectionView_SelectionChanged">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
@@ -76,9 +77,12 @@
                                         <VisualStateManager.VisualStateGroups>
                                             <VisualStateGroup Name="CommonStates">
                                                 <VisualState Name="Normal" />
-                                                <VisualState Name="Selected">
+                                                <VisualState 
+                                                    Name="Selected">
                                                     <VisualState.Setters>
-                                                        <Setter Property="BackgroundColor" Value="Transparent" />
+                                                        <Setter 
+                                                            Property="BackgroundColor"
+                                                            Value="White" />
                                                     </VisualState.Setters>
                                                 </VisualState>
                                             </VisualStateGroup>

@@ -1,6 +1,9 @@
 AlcoolGasolina.Droid.MainActivity, AlcoolGasolina.Android;crc645eb20150abdebb89.MainActivity
 AlcoolGasolina.Droid.MainActivity;crc645eb20150abdebb89.MainActivity
 alcoolgasolina.droid.MainActivity;crc645eb20150abdebb89.MainActivity
+AlcoolGasolina.Droid.SplashActivity, AlcoolGasolina.Android;crc645eb20150abdebb89.SplashActivity
+AlcoolGasolina.Droid.SplashActivity;crc645eb20150abdebb89.SplashActivity
+alcoolgasolina.droid.SplashActivity;crc645eb20150abdebb89.SplashActivity
 GalaSoft.MvvmLight.Views.ActivityBase, GalaSoft.MvvmLight.Platform;crc64e6bbec0cebca6418.ActivityBase
 GalaSoft.MvvmLight.Views.ActivityBase;crc64e6bbec0cebca6418.ActivityBase
 galasoft.mvvmlight.views.ActivityBase;crc64e6bbec0cebca6418.ActivityBase
