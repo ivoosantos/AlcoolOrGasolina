@@ -23,14 +23,6 @@ namespace AlcoolGasolina.Droid
         protected override void OnResume()
         {
             base.OnResume();
-            Task startupWork = new Task(() => { SimulateStartup(); });
-            startupWork.Start();
-        }
-
-        // Simulates background work that happens behind the splash screen
-        async void SimulateStartup()
-        {
-            await Task.Delay(500);
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }
     }

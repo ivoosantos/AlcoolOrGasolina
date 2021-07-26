@@ -5,6 +5,7 @@ using System.Text;
 using Xamarin.Forms;
 using System.Globalization;
 using AlcoolGasolina.View;
+using AlcoolGasolina.Util;
 
 namespace AlcoolGasolina.ViewModel
 {
@@ -39,28 +40,29 @@ namespace AlcoolGasolina.ViewModel
 
         public void MostrarResultado()
         {
+            string currencySymbol = DeviceInformation.CurrencySymbol;
 
-            ValorAlcool = Decimal.Parse(Alcool.ToString("F", CultureInfo.GetCultureInfo("pt-BR")));
-            ValorGasolina = Decimal.Parse(Gasolina.ToString("F", CultureInfo.GetCultureInfo("pt-BR")));
+            ValorAlcool = Decimal.Parse(Alcool.ToString("F", CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage)));
+            ValorGasolina = Decimal.Parse(Gasolina.ToString("F", CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage)));
 
             if(ValorAlcool > ValorGasolina)
             {
-                MessageValAlcool = "R$" + ValorAlcool;
-                MessageValGasolina = "R$" + ValorGasolina;
+                MessageValAlcool = currencySymbol + ValorAlcool;
+                MessageValGasolina = currencySymbol + ValorGasolina;
                 MessageAlcool = "Compensa: Não";
                 MessageGasolina = "Compensa: Sim";
             }
             else if(ValorAlcool < ValorGasolina)
             {
-                MessageValAlcool = "R$" + ValorAlcool;
-                MessageValGasolina = "R$" + ValorGasolina;
+                MessageValAlcool = currencySymbol + ValorAlcool;
+                MessageValGasolina = currencySymbol + ValorGasolina;
                 MessageAlcool = "Compensa: Sim";
                 MessageGasolina = "Compensa: Não";
             }
             else
             {
-                MessageValAlcool = "R$" + ValorAlcool;
-                MessageValGasolina = "R$" + ValorGasolina;
+                MessageValAlcool = currencySymbol + ValorAlcool;
+                MessageValGasolina = currencySymbol + ValorGasolina;
                 MessageAlcool = "Compensa: Valor Igual";
                 MessageGasolina = "Compensa: Valor Igual";
             }
@@ -76,9 +78,7 @@ namespace AlcoolGasolina.ViewModel
         public void VoltarInicio()
         {
             App.Current.MainPage.Navigation.PopModalAsync(true);
-            //App.Current.MainPage.Navigation.PushModalAsync(new View.Menu(), true);
             App.Current.MainPage = new View.Menu();
-            //App.Current.Quit();
         }
     }
 }

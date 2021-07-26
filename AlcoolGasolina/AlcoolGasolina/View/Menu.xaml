@@ -6,6 +6,11 @@
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.Menu">
 
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem 
+            IconImageSource="options.png"/>
+    </MasterDetailPage.ToolbarItems>
+
     <MasterDetailPage.Master>
         <ContentPage Title="Menu" Padding="0">
             <ContentPage.Content>
@@ -59,12 +64,12 @@
                                 </StackLayout>
                             </ViewCell>
 
-                            <ViewCell Tapped="GoConfig">
+                            <!--<ViewCell Tapped="GoConfig">
                                 <StackLayout Padding="20,5" Orientation="Horizontal">
                                     <Image Source="configCar02.png" WidthRequest="25" HeightRequest="25" />
                                     <Label Text="Configuração" VerticalTextAlignment="Center" FontSize="Large"/>
                                 </StackLayout>
-                            </ViewCell>
+                            </ViewCell>-->
 
                             <ViewCell Tapped="Sair">
                                 <StackLayout Padding="15,10" Orientation="Horizontal">

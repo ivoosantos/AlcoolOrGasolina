@@ -104,9 +104,8 @@ namespace AlcoolGasolina.ViewModel
                 {
                     Armazenamento.Alcool = CalcularAlcool(valAlcool, KmAlcool, TotalDaViagem);
                     Armazenamento.Gasolina = CalcularGasolina(valGasolina, KmGasolina, TotalDaViagem);
-                    this.page.Navigation.PushAsync(new View.Resultado());
 
-                    //App.Current.MainPage = new NavigationPage(new View.Resultado());
+                    this.page.Navigation.PushAsync(new View.Resultado());
                 }
             }
             catch (Exception ex)
@@ -123,8 +122,8 @@ namespace AlcoolGasolina.ViewModel
                 Retorno = vA;
             else
                 Retorno = vA * div;
-            
-            return (Decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo("pt-BR"))));
+
+            return decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage)));
         }
 
         private static decimal CalcularGasolina(decimal vG, Decimal kmG, Decimal kmT)
@@ -136,15 +135,17 @@ namespace AlcoolGasolina.ViewModel
             else
                 Retorno = vG * div;
 
-            return (Decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo("pt-BR"))));
+            return decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage)));
         }
 
         private decimal ConverterToDecimal(string str)
         {
+            var language = CultureInfo.CurrentCulture.ToString();
+
             decimal result = 0m;
-            if (decimal.TryParse(str.Replace("R$", "").Trim(), out result))
+            if (decimal.TryParse(str.Replace(DeviceInformation.CurrencySymbol, "").Trim(), out result))
             {
-                result = decimal.Parse(str.Replace("R$", ""), new CultureInfo("pt-BR"));
+                result = decimal.Parse(str.Replace(DeviceInformation.CurrencySymbol, ""), new CultureInfo(language));
             }
             else
             {

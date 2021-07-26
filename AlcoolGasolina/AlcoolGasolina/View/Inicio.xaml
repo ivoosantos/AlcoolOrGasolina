@@ -9,12 +9,41 @@
              BackgroundImageSource="estrada_viagem.jpg">
 
     <ContentPage.Content>
-        <ScrollView>
-            <AbsoluteLayout>
+        <StackLayout
+            Padding="25"
+            VerticalOptions="End">
+            <StackLayout
+                 VerticalOptions="CenterAndExpand">
+                <Image
+                    Margin="0,0,0,220"
+                    Source="logo_gas.png" 
+                    WidthRequest="150"
+                    AbsoluteLayout.LayoutBounds=".5,50,230,230"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Grid.Row="0"/>
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="End">
+                <Button
+                    Text="Iniciar"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#1C1C1C"
+                    TextColor="White"/> 
+            </StackLayout>
+            
+            <!--<StackLayout
+                VerticalOptions="End">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
                 <Image 
                     Source="logo_gas.png" 
+                    WidthRequest="250"
                     AbsoluteLayout.LayoutBounds=".5,50,230,230"
-                    AbsoluteLayout.LayoutFlags="XProportional"/>
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Grid.Row="0"/>
+                
                 <Label 
                     Text="Álcool ou Gasolina"
                     FontAttributes="Bold"
@@ -22,8 +51,19 @@
                     TextColor="WhiteSmoke"
                     HorizontalTextAlignment="Center" 
                     AbsoluteLayout.LayoutBounds=".5,300,1,40"
-                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-            </AbsoluteLayout>
-        </ScrollView>
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"
+                    Grid.Row="1"/>
+                
+            </Grid>
+
+            </StackLayout>
+            <Button
+                Text="Iniciar"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                BackgroundColor="#1C1C1C"
+                Margin="10,200,10,0"
+                TextColor="White"/>-->
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

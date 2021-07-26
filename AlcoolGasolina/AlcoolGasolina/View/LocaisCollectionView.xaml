@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AlcoolGasolina.View.LocaisCollectionView"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             BackgroundColor="#EEEEEE">
+             BackgroundColor="#FFFFFF">
     <ContentPage.Content>
         <AbsoluteLayout>
             <Grid 
@@ -41,6 +41,8 @@
                 <Frame 
                     HasShadow="True"
                     BackgroundColor="#FFFFFF"
+                    BorderColor="Black"
+                    CornerRadius="10" 
                     Grid.Row="1"
                     Margin="0,0,0,0">
                     <Grid>
@@ -88,7 +90,7 @@
                                             </VisualStateGroup>
                                         </VisualStateManager.VisualStateGroups>
                                         <pancake:PancakeView
-                                            BackgroundColor="LightGray"
+                                            BackgroundColor="#EEEEEE"
                                             CornerRadius="5,5,5,5"
                                             Margin="25,15,25,0">
                                             <Grid

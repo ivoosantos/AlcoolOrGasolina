@@ -50,7 +50,8 @@ namespace AlcoolGasolina.ViewModel
             else
                 Retorno = val * div;
 
-            return (Decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo("pt-BR"))));
+            var language = CultureInfo.CurrentCulture.ToString();
+            return (Decimal.Parse(Retorno.ToString("F", CultureInfo.GetCultureInfo(language))));
         }
     }
 }
