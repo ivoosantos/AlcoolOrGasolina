@@ -3,9 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:local="clr-namespace:AlcoolGasolina.Util"
+             xmlns:local="clr-namespace:AlcoolGasolina.Util" xmlns:viewmodel="clr-namespace:AlcoolGasolina.ViewModel" x:DataType="viewmodel:UmCombustivelViewModel"
+             xmlns:localConverter="clr-namespace:AlcoolGasolina.Util.Converters"
              mc:Ignorable="d"
-             x:Class="AlcoolGasolina.View.UmCombustivel">
+             x:Class="AlcoolGasolina.View.UmCombustivel"
+             Title="Combustível Único">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0" Margin="10">
@@ -15,7 +24,8 @@
 
                 <Label Text="Valor do Combustível" Style="{StaticResource LabelPreto}"/>
                 <!--, Converter={StaticResource Key=ConverteMoeda}-->
-                <Entry Keyboard="Numeric" x:Name="Combustivel" Placeholder="R$ 0.000,00" Text="{Binding ValorCombustivel}">
+                <!--x:Name="Combustivel"-->
+                <Entry Keyboard="Numeric" Placeholder="R$ 0.000,00" Text="{Binding ValCombustivel, Mode=TwoWay}">
                     <Entry.Behaviors>
                         <local:MascaraMoeda/>
                     </Entry.Behaviors>

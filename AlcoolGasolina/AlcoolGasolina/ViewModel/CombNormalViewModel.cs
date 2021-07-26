@@ -27,7 +27,7 @@ namespace AlcoolGasolina.ViewModel
 
         public string MessageCompensa 
         {
-            get { return "Este é o valor que você \n vai gastar para sua viagem!"; }
+            get { return "Este é o valor que você \nvai gastar para sua viagem!"; }
         }
 
         private Decimal valorCombustivel;

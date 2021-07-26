@@ -12,17 +12,35 @@ namespace AlcoolGasolina.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UmCombustivel : ContentPage
     {
+        public static bool resetValues = false;
+        UmCombustivelViewModel umCombustivelViewModel;
         public UmCombustivel()
         {
             InitializeComponent();
-            BindingContext = new UmCombustivelViewModel();
+            umCombustivelViewModel = new UmCombustivelViewModel(this);
+            BindingContext = umCombustivelViewModel;
+
             KmViagemC.Text = "";
             KmViagemT.Text = "";
         }
 
-        private void Combustivel_TextChanged(object sender, TextChangedEventArgs e)
+        protected override void OnAppearing()
         {
-            AlcoolGasolina.Model.Armazenamento.ValCombustivel = Combustivel.Text;
+            if (resetValues)
+            {
+                umCombustivelViewModel.OnAppearingViewModel(resetValues);
+
+                KmViagemC.Text = "";
+                KmViagemT.Text = "";
+
+                resetValues = false;
+            }
+            base.OnAppearing();
         }
+
+        //private void Combustivel_TextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    //AlcoolGasolina.Model.Armazenamento.ValCombustivel = Combustivel.Text;
+        //}
     }
 }
