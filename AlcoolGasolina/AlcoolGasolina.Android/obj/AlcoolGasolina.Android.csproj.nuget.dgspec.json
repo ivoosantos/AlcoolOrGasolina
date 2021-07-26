@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[4.8.0.1821, )"
             },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[4.8.0.1821, )"
+            },
             "Xamarin.Forms.PancakeView": {
               "target": "Package",
               "version": "[2.0.1.698, )"
@@ -147,6 +151,10 @@
             "Xamarin.Forms.ConvertersPack": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "Xamarin.Forms.Maps": {
+              "target": "Package",
+              "version": "[4.8.0.1821, )"
             },
             "Xamarin.Forms.MaskedEntry": {
               "target": "Package",

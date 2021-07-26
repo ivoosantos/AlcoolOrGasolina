@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "t4Tg89WOEOsz95mEG3tT1fPlzX2vVhzCMQ0cNhlXQ1WSZpcYarq2tys8D7i26ht4o+MhrWVElHaNnvsu9sKIvw==",
+  "dgSpecHash": "r0h7bDujteyLbp5gtc9agvPphv9x1sixOJX+E74ZO7O1nkTIFIXI6IyyrDDFwunIx2l8CpFO5U70X9+hNGoMQg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
   "expectedPackageFiles": [
@@ -49,12 +49,18 @@
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.build.download\\0.4.11\\xamarin.build.download.0.4.11.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.behaviorvalidationpack\\1.1.0\\xamarin.forms.behaviorvalidationpack.1.1.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.converterspack\\1.0.0\\xamarin.forms.converterspack.1.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.maps\\4.8.0.1821\\xamarin.forms.maps.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.maskedentry\\1.0.0\\xamarin.forms.maskedentry.1.0.0.nupkg.sha512",
-    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.googleplayservices.base\\71.1610.0\\xamarin.googleplayservices.base.71.1610.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.googleplayservices.basement\\71.1620.0\\xamarin.googleplayservices.basement.71.1620.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.googleplayservices.maps\\71.1610.0\\xamarin.googleplayservices.maps.71.1610.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.0\\xamarin.googleplayservices.tasks.71.1601.0.nupkg.sha512"
   ],
   "logs": []
 }

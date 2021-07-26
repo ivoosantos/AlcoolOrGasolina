@@ -4,16 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:AlcoolGasolina.Util" xmlns:viewmodel="clr-namespace:AlcoolGasolina.ViewModel" x:DataType="viewmodel:UmCombustivelViewModel"
-             xmlns:localConverter="clr-namespace:AlcoolGasolina.Util.Converters"
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.UmCombustivel"
              Title="Combustível Único">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
     <ContentPage.Content>
         <ScrollView>
