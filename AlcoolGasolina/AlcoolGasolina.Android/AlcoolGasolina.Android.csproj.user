@@ -1,14 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <SelectedDevice>Samsung SM-A510M</SelectedDevice>
-    <DefaultDevice>Android_Accelerated_x86_Nougat</DefaultDevice>
-    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
-<<<<<<< HEAD
-    <ActiveDebugProfile>emulador_one</ActiveDebugProfile>
-    <AndroidDesignerPreferredDevice>Nexus 4</AndroidDesignerPreferredDevice>
-=======
-    <ActiveDebugProfile>Samsung SM-A510M</ActiveDebugProfile>
->>>>>>> develop
+    <SelectedDevice>pixel_3_r_11_0_-_api_30</SelectedDevice>
+    <ActiveDebugProfile>pixel_3_r_11_0_-_api_30</ActiveDebugProfile>
+    <DefaultDevice>pixel_3_r_11_0_-_api_30</DefaultDevice>
   </PropertyGroup>
 </Project>

@@ -4,7 +4,10 @@
              x:Class="AlcoolGasolina.View.MapaView"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
     <ContentPage.Content>
-        <StackLayout>
-        </StackLayout>
+        <maps:Map
+                x:Name="Map"
+                VerticalOptions="FillAndExpand"
+                MapType="Street"
+                IsShowingUser="True"/>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

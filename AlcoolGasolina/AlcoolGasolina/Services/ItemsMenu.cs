@@ -12,23 +12,47 @@ namespace AlcoolGasolina.Services
 
         public static ObservableCollection<ItemMenuLateral> GetMenuItens()
         {
-            menuLateral = new ObservableCollection<ItemMenuLateral>();
+            menuLateral = new ObservableCollection<ItemMenuLateral>()
+            {
+                new ItemMenuLateral()
+                {
+                    Title = "Início",
+                    Icon = "home01.png"
+                },
 
-            var page01 = new ItemMenuLateral() { Title = "Início", Icon = "home01.png", TargetType = typeof(View.Inicio) };
-            var page02 = new ItemMenuLateral() { Title = "Carro Flex", Icon = "posto02.png", TargetType = typeof(View.InserirDados) };
-            var page03 = new ItemMenuLateral() { Title = "Álcool", Icon = "iconAlcool03.png", TargetType = null };
-            var page04 = new ItemMenuLateral() { Title = "Gasolina", Icon = "iconGas03.png", TargetType = null };
-            var page05 = new ItemMenuLateral() { Title = "Mapas", Icon = "iconGas03.png", TargetType = null };
+                new ItemMenuLateral()
+                {
+                    Title = "Carro Flex",
+                    Icon = "posto02.png"
+                },
 
-            menuLateral.Add(page01);
-            menuLateral.Add(page02);
-            menuLateral.Add(page03);
-            menuLateral.Add(page04);
-            menuLateral.Add(page05);
+                new ItemMenuLateral()
+                {
+                    Title = "Álcool",
+                    Icon = "iconAlcool03.png"
+                },
+
+                new ItemMenuLateral()
+                {
+                    Title = "Gasolina",
+                    Icon = "iconGas03.png"
+                },
+
+                new ItemMenuLateral()
+                {
+                    Title = "Mapas",
+                    Icon = "map_icon.png"
+                }
+            };
+
+            //menuLateral.Add(page01);
+            //menuLateral.Add(page02);
+            //menuLateral.Add(page03);
+            //menuLateral.Add(page04);
+            //menuLateral.Add(page05);
 
             return menuLateral;
-
         }
-
     }
 }
+

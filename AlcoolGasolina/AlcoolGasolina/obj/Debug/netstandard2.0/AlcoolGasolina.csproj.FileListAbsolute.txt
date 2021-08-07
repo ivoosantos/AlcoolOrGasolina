@@ -49,3 +49,4 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\ref\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.pdb
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache

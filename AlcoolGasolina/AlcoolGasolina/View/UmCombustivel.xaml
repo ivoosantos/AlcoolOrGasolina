@@ -8,13 +8,6 @@
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.UmCombustivel"
              Title="Combustível Único">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="0" Margin="10">

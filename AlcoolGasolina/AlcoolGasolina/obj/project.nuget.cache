@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fG+Lr9PtxKyq+XzglYq/W7xeNH/OLAYejF7DSSorrTihHzS+9YocIl6eEL6wuXtpnD4NJX8T1n5UWQXdKJsgvQ==",
+  "dgSpecHash": "YPqioPW+vi/hpWXRGw2i9z/B5kWtorw4SDRLseqOi6ylEqgjmXgRStj1Tl27qgZjicjFqs23tcAdeydZirfANA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.behaviorvalidationpack\\1.1.0\\xamarin.forms.behaviorvalidationpack.1.1.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.converterspack\\1.0.0\\xamarin.forms.converterspack.1.0.0.nupkg.sha512",
+    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.maps\\4.8.0.1821\\xamarin.forms.maps.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.maskedentry\\1.0.0\\xamarin.forms.maskedentry.1.0.0.nupkg.sha512",
     "C:\\Users\\Gabriel Juren\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
   ],
