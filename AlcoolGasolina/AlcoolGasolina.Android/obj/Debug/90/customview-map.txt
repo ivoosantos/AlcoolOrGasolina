@@ -22,7 +22,6 @@ background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
 cache-path;C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
-color;obj\Debug\90\res\values\styles.xml
 declare-styleable;C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\43\jl\res\values\attrs.xml
 external-cache-path;C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
