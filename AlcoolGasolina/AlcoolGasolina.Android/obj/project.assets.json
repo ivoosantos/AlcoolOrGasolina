@@ -2765,24 +2765,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\": {},
+    "C:\\Users\\ivoos\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
+      "projectUniqueName": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
       "projectName": "AlcoolGasolina.Android",
-      "projectPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
-      "packagesPath": "C:\\Users\\Gabriel Juren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\obj\\",
+      "projectPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
+      "packagesPath": "C:\\Users\\ivoos\\.nuget\\packages\\",
+      "outputPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel Juren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivoos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2796,8 +2799,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {
-              "projectPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj"
+            "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj": {
+              "projectPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj"
             }
           }
         }
@@ -2833,5 +2836,13 @@
         }
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
