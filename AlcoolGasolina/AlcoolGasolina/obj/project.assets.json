@@ -263,6 +263,18 @@
           "lib/netstandard2.0/Xamarin.Forms.ConvertersPack.dll": {}
         }
       },
+      "Xamarin.Forms.Maps/4.8.0.1821": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {}
+        }
+      },
       "Xamarin.Forms.MaskedEntry/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1792,6 +1804,43 @@
         "xamarin.forms.converterspack.nuspec"
       ]
     },
+    "Xamarin.Forms.Maps/4.8.0.1821": {
+      "sha512": "l1Z5PpNaa0Q1O6A/J+QImuHODpzJNCh2Pb0tIDZ3YjT/rgJ24I3cj4xXcQfjV8VEKWLy3eL6h2IA5FG0bvfGsA==",
+      "type": "package",
+      "path": "xamarin.forms.maps/4.8.0.1821",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Assets/xamarin_128x128.png",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid10.0/Xamarin.Forms.Maps.xml",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.Android.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.dll",
+        "lib/MonoAndroid90/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.macOS.dll",
+        "lib/Xamarin.Mac/Xamarin.Forms.Maps.xml",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.iOS.dll",
+        "lib/Xamarin.iOS10/Xamarin.Forms.Maps.xml",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard1.0/Xamarin.Forms.Maps.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Maps.xml",
+        "lib/tizen40/Xamarin.Forms.Maps.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.dll",
+        "lib/tizen40/Xamarin.Forms.Maps.xml",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.14393/Xamarin.Forms.Maps.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.dll",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.UWP.pri",
+        "lib/uap10.0.16299/Xamarin.Forms.Maps.dll",
+        "xamarin.forms.maps.4.8.0.1821.nupkg.sha512",
+        "xamarin.forms.maps.nuspec"
+      ]
+    },
     "Xamarin.Forms.MaskedEntry/1.0.0": {
       "sha512": "eFiuU5Dr9DfYX02Mc8GNNdb519xJfq28jdOZ0yKN+f6p9R+bp90i0jWW4abAQdvOsGF3iBC4txNggPmGvVdHMQ==",
       "type": "package",
@@ -1834,30 +1883,33 @@
       "Xamarin.Forms >= 4.8.0.1821",
       "Xamarin.Forms.BehaviorValidationPack >= 1.1.0",
       "Xamarin.Forms.ConvertersPack >= 1.0.0",
+      "Xamarin.Forms.Maps >= 4.8.0.1821",
       "Xamarin.Forms.MaskedEntry >= 1.0.0",
       "Xamarin.Forms.PancakeView >= 2.0.1.698"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel Juren\\.nuget\\packages\\": {},
+    "C:\\Users\\ivoos\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
+      "projectUniqueName": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
       "projectName": "AlcoolGasolina",
-      "projectPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
-      "packagesPath": "C:\\Users\\Gabriel Juren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina\\obj\\",
+      "projectPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.csproj",
+      "packagesPath": "C:\\Users\\ivoos\\.nuget\\packages\\",
+      "outputPath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel Juren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivoos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -1923,6 +1975,10 @@
             "target": "Package",
             "version": "[1.0.0, )"
           },
+          "Xamarin.Forms.Maps": {
+            "target": "Package",
+            "version": "[4.8.0.1821, )"
+          },
           "Xamarin.Forms.MaskedEntry": {
             "target": "Package",
             "version": "[1.0.0, )"
@@ -1942,7 +1998,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   },
