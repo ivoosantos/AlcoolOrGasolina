@@ -590,6 +590,14 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\map_icon.png
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\right_icon.png
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\options.png
+<<<<<<< HEAD
+=======
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\home.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\car.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\gas.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\map.png
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\res\drawable\signout.png
+>>>>>>> feature/MapaAjustes
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\uploadflags.txt
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\resolvedassemblies.hash
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\assets\AlcoolGasolina.Android.dll
@@ -1102,3 +1110,7 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+<<<<<<< HEAD
+=======
+C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina.Android\obj\Debug\90\android\src\crc645eb20150abdebb89\MyTabbedPageRenderer.java
+>>>>>>> feature/MapaAjustes

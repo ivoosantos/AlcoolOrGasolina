@@ -90,7 +90,7 @@
                                             </VisualStateGroup>
                                         </VisualStateManager.VisualStateGroups>
                                         <pancake:PancakeView
-                                            BackgroundColor="#EEEEEE"
+                                            BackgroundColor="#f0f1f5"
                                             CornerRadius="5,5,5,5"
                                             Margin="25,15,25,0">
                                             <Grid
@@ -118,6 +118,14 @@
                                                     TextColor="Black"
                                                     HorizontalTextAlignment="Center"
                                                     Grid.Row="1"/>
+
+                                                <Image
+                                                    Source="right_icon.png"
+                                                    Grid.Row="1"
+                                                    HorizontalOptions="End"
+                                                    HeightRequest="25"
+                                                    Margin="0,40,0,0"
+                                                    WidthRequest="25"/>
                                             </Grid>
                                         </pancake:PancakeView>
                                     </Grid>

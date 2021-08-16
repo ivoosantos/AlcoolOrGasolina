@@ -1,4 +1,7 @@
-﻿using App5.Model;
+﻿using AlcoolGasolina;
+using AlcoolGasolina.View;
+using App5.DependencyServices;
+using App5.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -6,6 +9,9 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 
 namespace App5.Services
 {
@@ -23,17 +29,17 @@ namespace App5.Services
             {
                 await GetDeviceLocation();
                 string googlePlaceUrl = $"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={testeLat},{testeLong}&radius={distancia}&types=gas_station&name=&key={myKey}";
-                
-                var httpClient = new HttpClient();
-                var json = await httpClient.GetStringAsync(googlePlaceUrl);
-                var results = JsonConvert.DeserializeObject<T>(json);
+
+                HttpClient httpClient = new HttpClient();
+                string json = await httpClient.GetStringAsync(googlePlaceUrl);
+                T results = JsonConvert.DeserializeObject<T>(json);
 
                 return results;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
-                return default(T);
+                return default;
             }
         }
 
@@ -41,15 +47,20 @@ namespace App5.Services
         {
             try
             {
-                var location = await Xamarin.Essentials.Geolocation.GetLocationAsync();
+                if (!DependencyService.Get<ILocation>().IsEnabled())
+                {
+                    DependencyService.Get<ILocation>().OpenSettings().Wait();
+                }
 
-				latitude = location.Latitude;
-				longitude = location.Longitude;
+                Location location = await Geolocation.GetLocationAsync();
+
+                latitude = location.Latitude;
+                longitude = location.Longitude;
                 testeLat = latitude.ToString().Replace(",", ".");
                 testeLong = longitude.ToString().Replace(",", ".");
-			}
-			catch (Exception ex)
-			{
+            }
+            catch (Exception ex)
+            {
                 Debug.WriteLine(ex.Message);
             }
         }
