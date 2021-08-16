@@ -12,7 +12,11 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <application android:label="PostoFácil" android:largeHeap="true" android:icon="@drawable/posto02" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true" android:extractNativeLibs="true">
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCAF_Sp4FTfSt0TZlPCyx5KhnAYs48-rVQ" />
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="AlcoolGasolina" android:theme="@style/MainTheme" android:name="crc645eb20150abdebb89.MainActivity" />
     <activity android:label="PostoFácil" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="crc645eb20150abdebb89.SplashActivity">
       <intent-filter>
