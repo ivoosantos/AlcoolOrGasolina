@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "r0h7bDujteyLbp5gtc9agvPphv9x1sixOJX+E74ZO7O1nkTIFIXI6IyyrDDFwunIx2l8CpFO5U70X9+hNGoMQg==",
+=======
+  "dgSpecHash": "DsZUdAIwwC3vFu+MdByp1BCRHMy0SGptWb6E5PtqZATBE+UdqbHxFFuDkd0E6q11PPBnuq3OpZ0vT3cAUZ0Dww==",
+>>>>>>> feature/MapaAjustes
   "success": true,
   "projectFilePath": "C:\\Users\\Gabriel Juren\\source\\repos\\AlcoolOrGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
   "expectedPackageFiles": [
