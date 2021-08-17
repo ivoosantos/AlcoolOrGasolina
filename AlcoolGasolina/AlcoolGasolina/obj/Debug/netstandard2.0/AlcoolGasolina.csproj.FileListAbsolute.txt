@@ -6,7 +6,6 @@ C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\Mono.Android.pdb
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Inicio.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\InserirDados.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\LocaisCollectionView.xaml.g.cs
@@ -14,7 +13,6 @@ C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\MapaView.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Menu.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\MenuLateral.xaml.g.cs
-C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Page1.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Resultado.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\ResultCombNormal.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\UmCombustivel.xaml.g.cs
@@ -26,7 +24,6 @@ C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.dll
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\ref\AlcoolGasolina.dll
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.pdb
-C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\AlcoolGasolina.deps.json
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\bin\Debug\netstandard2.0\ref\AlcoolGasolina.dll
@@ -50,3 +47,4 @@ C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasoli
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\ref\AlcoolGasolina.dll
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.pdb
 C:\Users\Gabriel Juren\source\repos\AlcoolOrGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache
+C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\AlcoolGasolina.csproj.AssemblyReference.cache
