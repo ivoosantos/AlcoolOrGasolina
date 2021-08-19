@@ -12,7 +12,6 @@ C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\MapasView.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\MapaView.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Menu.xaml.g.cs
-C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\MenuLateral.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\Resultado.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\ResultCombNormal.xaml.g.cs
 C:\GitApi\AlcoolGasolina\AlcoolGasolina\AlcoolGasolina\obj\Debug\netstandard2.0\View\UmCombustivel.xaml.g.cs

@@ -9,7 +9,7 @@
              Title="Resultado da Consulta">
 
     <ContentPage.Content>
-        <ScrollView BackgroundColor="#bdbdbd">
+        <ScrollView BackgroundColor="#fafafa">
             <StackLayout>
                 <Alcool:PancakeView BorderColor="BlanchedAlmond"
                                     BackgroundColor="#212121"
@@ -23,25 +23,25 @@
                     </StackLayout>
                 </Alcool:PancakeView>
 
-                <StackLayout Spacing="0" Margin="25,-50,25,0">
+                <StackLayout Spacing="0" Margin="25,20,25,0">
 
-                    <Frame BorderColor="Gray" Margin="0,0,0,30"
-                           CornerRadius="10"
-                           Padding="8" BackgroundColor="#bdbdbd">
-                        <StackLayout>
-                            <Label Text="Total do Álcool: " TextColor="#000000"/>
-                            <Label Text="{Binding MessageCombustivel}"
-                                   FontSize="Medium"
-                                   FontAttributes="Bold" TextColor="Black"/>
-                            <BoxView Color="Gray"
-                                     HeightRequest="2"
-                                     HorizontalOptions="Fill" />
-                            <Label Text="{Binding MessageCompensa}"/>
-                            <Label Text="Se beber não dirija!"/>
-                        </StackLayout>
-                    </Frame>
-
-                    <StackLayout Orientation="Horizontal" Margin="10,110,10,10">
+                    <StackLayout Margin="0,0,0,20">
+                        <Label Text="Valor Total de Combustível: " TextColor="#000000" FontSize="Title"/>
+                        <Label Text="{Binding MessageCombustivel}"
+                                FontSize="Large"
+                                FontAttributes="Bold" TextColor="#f4511e"/>
+                        <Label Text="{Binding MessageCompensa}" FontSize="Subtitle" TextColor="#e64a19"/>
+                        <BoxView Color="Black"
+                                    HeightRequest="2"
+                                    HorizontalOptions="Fill" Margin="0,20,0,0"/>
+                        
+                    </StackLayout>
+                    
+                    <StackLayout Spacing="0" Padding="40">
+                        <Label Text="Se beber não dirija!" HorizontalTextAlignment="Center" FontSize="Body"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
                         <Button Text="  Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
                             Command="{Binding BackInicio}"/>
