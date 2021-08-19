@@ -6,30 +6,127 @@
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.Menu">
 
-    <MasterDetailPage.Master>
-        <ContentPage Title="Menu" Padding="0">
-            <ContentPage.Content>
-                <StackLayout>
-                    <Grid BackgroundColor="#808080">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="10"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="10"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="30"/>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="10"/>
-                        </Grid.RowDefinitions>
-                        <Label
-                          Grid.Column="1"
-                          Grid.Row="2"
-                          Text="Controle Gasolina"
-                          TextColor="White" FontSize="Large"/>
-                    </Grid>
+    <MasterDetailPage.ToolbarItems>
+        <ToolbarItem IconImageSource="options.png"/>
+    </MasterDetailPage.ToolbarItems>
 
-                    <TableView Intent="Menu">
+    <MasterDetailPage.Master>
+        <ContentPage 
+            Title="Menu"
+            Padding="0">
+            <ContentPage.Content>
+                <Grid BackgroundColor="#1C1C1C">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+                        <Grid ColumnSpacing="50">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame
+                                Grid.Column="1"
+                                CornerRadius="100"
+                                HeightRequest="50"
+                                WidthRequest="50"
+                                Margin="0,0,0,25"
+                                BackgroundColor="#FFF">
+                                <Label
+                                    Text="Imagem..."
+                                    TextColor="Black"
+                                    FontSize="13"/>
+                            </Frame>
+                            <StackLayout
+                                Grid.Row="1"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center">
+                                <Label
+                                    FontSize="25"
+                                    TextColor="White"
+                                    Text="300"/>
+                                <Label
+                                    FontSize="15"
+                                    TextColor="White"
+                                    Text="Info"/>
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="1"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="1">
+                                <Label
+                                    FontSize="25"
+                                    TextColor="White"
+                                    Text="300"/>
+                                <Label
+                                    FontSize="17"
+                                    TextColor="White"
+                                    Text="Info"/>
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="1"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Grid.Column="2">
+                                <Label
+                                    FontSize="25"
+                                    TextColor="White"
+                                    Text="300"/>
+                                <Label
+                                    FontSize="17"
+                                    TextColor="White"
+                                    Text="Info"/>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="0,10,0,0"
+                        Grid.Row="1">
+                        <ListView 
+                            x:Name="listview"
+                            SeparatorColor="#FFF"
+                            HasUnevenRows="True"
+                            BackgroundColor="#1C1C1C"
+                            ItemTapped="listview_ItemTapped">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout 
+                                            HeightRequest="76"
+                                            VerticalOptions="FillAndExpand"
+                                            Orientation="Horizontal"
+                                            BackgroundColor="#1C1C1C">
+                                            <Image
+                                                Margin="25,0,0,0"
+                                                Source="{Binding Icon}"
+                                                WidthRequest="45"
+                                                HeightRequest="45"
+                                                VerticalOptions="Center"/>
+                                            <Label 
+                                                Text="{Binding Title}"
+                                                CharacterSpacing="1"
+                                                Margin="5,0,0,0"
+                                                FontSize="17"
+                                                VerticalOptions="Center"
+                                                TextColor="White"/>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <!--<TableView Intent="Menu">
                         <TableSection>
                             <ViewCell Tapped="GoHome">
                                 <StackLayout Padding="15,10" Orientation="Horizontal">
@@ -59,12 +156,12 @@
                                 </StackLayout>
                             </ViewCell>
 
-                            <ViewCell Tapped="GoConfig">
+                            --><!--<ViewCell Tapped="GoConfig">
                                 <StackLayout Padding="20,5" Orientation="Horizontal">
                                     <Image Source="configCar02.png" WidthRequest="25" HeightRequest="25" />
                                     <Label Text="Configuração" VerticalTextAlignment="Center" FontSize="Large"/>
                                 </StackLayout>
-                            </ViewCell>
+                            </ViewCell>--><!--
 
                             <ViewCell Tapped="Sair">
                                 <StackLayout Padding="15,10" Orientation="Horizontal">
@@ -74,8 +171,8 @@
                             </ViewCell>
 
                         </TableSection>
-                    </TableView>
-                </StackLayout>
+                    </TableView>-->
+                </Grid>
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Master>

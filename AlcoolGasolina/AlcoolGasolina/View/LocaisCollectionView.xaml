@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AlcoolGasolina.View.LocaisCollectionView"
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
-             BackgroundColor="#EEEEEE">
+             BackgroundColor="#FFFFFF">
     <ContentPage.Content>
         <AbsoluteLayout>
             <Grid 
@@ -41,6 +41,8 @@
                 <Frame 
                     HasShadow="True"
                     BackgroundColor="#FFFFFF"
+                    BorderColor="Black"
+                    CornerRadius="10" 
                     Grid.Row="1"
                     Margin="0,0,0,0">
                     <Grid>
@@ -62,8 +64,9 @@
                             Margin="0,5,0,0"
                             SelectionMode="Single"
                             Grid.Row="3"
-                            SelectedItem="{Binding ResultSelected, Mode=TwoWay}"
-                            ItemsSource="{Binding Locais}">
+                            SelectedItem="{Binding ResultSelected}"
+                            ItemsSource="{Binding Locais}"
+                            SelectionChanged="CollectionView_SelectionChanged">
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>
@@ -76,15 +79,18 @@
                                         <VisualStateManager.VisualStateGroups>
                                             <VisualStateGroup Name="CommonStates">
                                                 <VisualState Name="Normal" />
-                                                <VisualState Name="Selected">
+                                                <VisualState 
+                                                    Name="Selected">
                                                     <VisualState.Setters>
-                                                        <Setter Property="BackgroundColor" Value="Transparent" />
+                                                        <Setter 
+                                                            Property="BackgroundColor"
+                                                            Value="White" />
                                                     </VisualState.Setters>
                                                 </VisualState>
                                             </VisualStateGroup>
                                         </VisualStateManager.VisualStateGroups>
                                         <pancake:PancakeView
-                                            BackgroundColor="LightGray"
+                                            BackgroundColor="#f0f1f5"
                                             CornerRadius="5,5,5,5"
                                             Margin="25,15,25,0">
                                             <Grid
@@ -112,6 +118,14 @@
                                                     TextColor="Black"
                                                     HorizontalTextAlignment="Center"
                                                     Grid.Row="1"/>
+
+                                                <Image
+                                                    Source="right_icon.png"
+                                                    Grid.Row="1"
+                                                    HorizontalOptions="End"
+                                                    HeightRequest="25"
+                                                    Margin="0,40,0,0"
+                                                    WidthRequest="25"/>
                                             </Grid>
                                         </pancake:PancakeView>
                                     </Grid>

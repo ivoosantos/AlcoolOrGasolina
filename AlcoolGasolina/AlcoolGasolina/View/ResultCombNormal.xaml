@@ -37,7 +37,7 @@
                                      HeightRequest="2"
                                      HorizontalOptions="Fill" />
                             <Label Text="{Binding MessageCompensa}"/>
-                            <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
+                            <Label Text="Se beber não dirija!"/>
                         </StackLayout>
                     </Frame>
 

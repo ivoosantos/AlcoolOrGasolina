@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZRXDbPt+4P+xA3/FMx5Gl0+M6aVP9J/QFAL6lgUPYgmt5t7p9uXJXl3Er1vH1KlnYjcCLRbazkaX9YdWWomxZQ==",
+  "dgSpecHash": "SPKKbE4YuBtTCPoMLhYBzANznQE2vR0p5hkwIZUSTrcRAqBmCPW1BG0lHxBmKiPAzfgYTOZaHFoP4Ev8PQLQ3g==",
   "success": true,
   "projectFilePath": "C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\AlcoolGasolina.Android.csproj",
   "expectedPackageFiles": [
@@ -49,12 +49,25 @@
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.android.support.vector.drawable\\28.0.0.3\\xamarin.android.support.vector.drawable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.android.support.versionedparcelable\\28.0.0.3\\xamarin.android.support.versionedparcelable.28.0.0.3.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.android.support.viewpager\\28.0.0.3\\xamarin.android.support.viewpager.28.0.0.3.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.build.download\\0.4.11\\xamarin.build.download.0.4.11.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms\\4.8.0.1821\\xamarin.forms.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.behaviorvalidationpack\\1.1.0\\xamarin.forms.behaviorvalidationpack.1.1.0.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.converterspack\\1.0.0\\xamarin.forms.converterspack.1.0.0.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.maps\\4.8.0.1821\\xamarin.forms.maps.4.8.0.1821.nupkg.sha512",
     "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.maskedentry\\1.0.0\\xamarin.forms.maskedentry.1.0.0.nupkg.sha512",
-    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.forms.pancakeview\\2.0.1.698\\xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.googleplayservices.base\\71.1610.0\\xamarin.googleplayservices.base.71.1610.0.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.googleplayservices.basement\\71.1620.0\\xamarin.googleplayservices.basement.71.1620.0.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.googleplayservices.maps\\71.1610.0\\xamarin.googleplayservices.maps.71.1610.0.nupkg.sha512",
+    "C:\\Users\\ivoos\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.0\\xamarin.googleplayservices.tasks.71.1601.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache C:\\GitApi\\AlcoolGasolina\\AlcoolGasolina\\AlcoolGasolina.Android\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

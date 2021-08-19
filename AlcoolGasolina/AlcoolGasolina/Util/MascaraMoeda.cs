@@ -30,10 +30,10 @@ namespace AlcoolGasolina.Util
                 bool ehCallback = false;
                 texto = args.NewTextValue;
 
-                if (texto.Contains("R$"))
+                if (texto.Contains(DeviceInformation.CurrencySymbol))
                 {
                     var valorNovoEmDecimal = ConverterReaisParaDecimal(texto);
-                    var valorAntigoEmDecimal = args.OldTextValue.Contains("R$") ? ConverterReaisParaDecimal(args.OldTextValue) : int.Parse(args.OldTextValue);
+                    var valorAntigoEmDecimal = args.OldTextValue.Contains(DeviceInformation.CurrencySymbol) ? ConverterReaisParaDecimal(args.OldTextValue) : int.Parse(args.OldTextValue);
                     ehCallback = valorNovoEmDecimal == valorAntigoEmDecimal;
 
                     texto = valorNovoEmDecimal.ToString();
@@ -43,7 +43,7 @@ namespace AlcoolGasolina.Util
                 {
                     if (!string.IsNullOrEmpty(texto))
                     {
-                        var textoFormatadoEmReais = (Decimal.Parse(texto) / 100).ToString("C", CultureInfo.GetCultureInfo("pt-BR"));
+                        var textoFormatadoEmReais = (Decimal.Parse(texto) / 100).ToString("C", CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage));
                         texto = textoFormatadoEmReais;
                     }
 
@@ -54,8 +54,8 @@ namespace AlcoolGasolina.Util
 
         private static int ConverterReaisParaDecimal(string valor)
         {
-            var valorConvertido = Decimal.Parse(valor.Replace("R$ ", "").Replace(",", "").Replace(".", ""),
-                CultureInfo.GetCultureInfo("pt-BR"));
+            var valorConvertido = Decimal.Parse(valor.Replace(DeviceInformation.CurrencySymbol, "").Replace(",", "").Replace(".", ""),
+                CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage));
             return (int)valorConvertido;
         }
     }

@@ -15,6 +15,6 @@ namespace AlcoolGasolina.Model
         public static string Mensagem { get; set; }
         public static string MensagemErro { get; set; }
         public static Decimal ValorCombustivel { get; set; }
-        public static string ValCombustivel { get; set; }
+        //public static string ValCombustivel { get; set; }
     }
 }

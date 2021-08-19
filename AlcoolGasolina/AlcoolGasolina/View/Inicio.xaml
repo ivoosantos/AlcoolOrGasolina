@@ -9,28 +9,61 @@
              BackgroundImageSource="estrada_viagem.jpg">
 
     <ContentPage.Content>
-        <ScrollView>
-            <AbsoluteLayout>
-                <!--https://http2.mlstatic.com/adesivo-paisagem-estrada-viagem-papel-parede-floresta-gg566-D_NQ_NP_784206-MLB31456760521_072019-F.jpg-->
-                <!-- BackgroundColor="#212121"-->
-                <!--<BoxView BackgroundColor="#d50000" 
-                         AbsoluteLayout.LayoutBounds="0,0,1,150" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />-->
+        <StackLayout
+            Padding="25"
+            VerticalOptions="End">
+            <StackLayout
+                 VerticalOptions="CenterAndExpand">
+                <Image
+                    Margin="0,0,0,220"
+                    Source="logo_gas.png" 
+                    WidthRequest="150"
+                    AbsoluteLayout.LayoutBounds=".5,50,230,230"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Grid.Row="0"/>
+            </StackLayout>
+            <StackLayout
+                VerticalOptions="End">
+                <Button
+                    Text="Iniciar"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="#1C1C1C"
+                    TextColor="White"/> 
+            </StackLayout>
+            
+            <!--<StackLayout
+                VerticalOptions="End">
+                <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image 
+                    Source="logo_gas.png" 
+                    WidthRequest="250"
+                    AbsoluteLayout.LayoutBounds=".5,50,230,230"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    Grid.Row="0"/>
+                
+                <Label 
+                    Text="Álcool ou Gasolina"
+                    FontAttributes="Bold"
+                    FontSize="26"
+                    TextColor="WhiteSmoke"
+                    HorizontalTextAlignment="Center" 
+                    AbsoluteLayout.LayoutBounds=".5,300,1,40"
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"
+                    Grid.Row="1"/>
+                
+            </Grid>
 
-                <!--<Button BackgroundColor="DarkGreen" AbsoluteLayout.LayoutBounds=".5,39,220,220" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="115" />
-                <Button BackgroundColor="GreenYellow" AbsoluteLayout.LayoutBounds=".5,50,200,200" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="100" />-->
-                <!--Source="https://images-na.ssl-images-amazon.com/images/I/51fDPIzO1kL.png"  CornerRadius="150" -->
-                <Image Source="logo_gas.png" 
-                             AbsoluteLayout.LayoutBounds=".5,50,230,230" AbsoluteLayout.LayoutFlags="XProportional"/>
-
-                <Label Text="Álcool ou Gasolina" FontAttributes="Bold" FontSize="26"
-                    TextColor="WhiteSmoke" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds=".5,300,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
-
-                <!-- BackgroundColor="#6a1b9a"-->
-                <!--<Button Text="Iniciar" TextColor="WhiteSmoke" FontSize="Large"
-                        AbsoluteLayout.LayoutBounds=".5,400,300,60" AbsoluteLayout.LayoutFlags="XProportional" 
-                        BorderRadius="15" Command="{Binding InicioCommand}"/>-->
-            </AbsoluteLayout>
-        </ScrollView>
+            </StackLayout>
+            <Button
+                Text="Iniciar"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End"
+                BackgroundColor="#1C1C1C"
+                Margin="10,200,10,0"
+                TextColor="White"/>-->
+        </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

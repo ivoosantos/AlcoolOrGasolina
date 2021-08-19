@@ -7,17 +7,10 @@
              xmlns:converterPack="clr-namespace:Xamarin.Forms.ConvertersPack;assembly=Xamarin.Forms.ConvertersPack"
              xmlns:behaviorPack="clr-namespace:Xamarin.Forms.BehaviorValidationPack;assembly=Xamarin.Forms.BehaviorValidationPack"
              xmlns:local="clr-namespace:AlcoolGasolina.Util" xmlns:viewmodel="clr-namespace:AlcoolGasolina.ViewModel" x:DataType="viewmodel:InserirDadosViewModel"
-             xmlns:localConverter="clr-namespace:AlcoolGasolina.Util.Converters"
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.InserirDados"
              Title="Carro Flex">
     
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <localConverter:StringToDecimalConverter x:Key="StringToDecimalConverter"/>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <ScrollView
             BackgroundColor="White">
