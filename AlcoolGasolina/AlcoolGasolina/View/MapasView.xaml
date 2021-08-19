@@ -5,6 +5,8 @@
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:pages="clr-namespace:AlcoolGasolina.View"
+            xmlns:tabs="clr-namespace:Sharpnado.Tabs;assembly=Sharpnado.Tabs"
+            xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
             Title="Mapas">
     <pages:MapaView 
         Title="Mapas"

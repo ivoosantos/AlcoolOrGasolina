@@ -1,4 +1,6 @@
 ﻿using AlcoolGasolina.Model;
+using App5.DependencyServices;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -49,7 +51,7 @@ namespace AlcoolGasolina.View
             listview.ItemsSource = MenuLateral;
         }
 
-        private void listview_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void listview_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             ItemMenuLateral item = e.Item as ItemMenuLateral;
 

@@ -30,6 +30,8 @@ namespace AlcoolGasolina.Util
                 bool ehCallback = false;
                 texto = args.NewTextValue;
 
+                texto = HasNumber(texto);
+
                 if (texto.Contains(DeviceInformation.CurrencySymbol))
                 {
                     var valorNovoEmDecimal = ConverterReaisParaDecimal(texto);
@@ -54,9 +56,28 @@ namespace AlcoolGasolina.Util
 
         private static int ConverterReaisParaDecimal(string valor)
         {
+            valor = HasNumber(valor);
+
             var valorConvertido = Decimal.Parse(valor.Replace(DeviceInformation.CurrencySymbol, "").Replace(",", "").Replace(".", ""),
                 CultureInfo.GetCultureInfo(DeviceInformation.CurentLanguage));
+
             return (int)valorConvertido;
+        }
+
+        public static string HasNumber(string text)
+        {
+            bool hasNumber = false;
+
+            foreach (char c in text)
+            {
+                if (char.IsDigit(c))
+                {
+                    hasNumber = true;
+                    break;
+                }
+            }
+
+            return !hasNumber ? "0" : text;
         }
     }
 }

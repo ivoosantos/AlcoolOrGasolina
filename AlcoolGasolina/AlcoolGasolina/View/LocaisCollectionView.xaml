@@ -16,11 +16,39 @@
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="50"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
+                        <Picker
+                            x:Name="picker"
+                            ItemsSource="{Binding DistanciaItems}"
+                            TextColor="Black"
+                            SelectedItem="{Binding SelectedItemPicker}"
+                            HorizontalTextAlignment="Center"
+                            CharacterSpacing="1"
+                            IsVisible="False"
+                            Margin="80,0,80,0">
+                        </Picker>
+                        <SearchBar
+                            Grid.Row="0"
+                            Margin="0,10,40,0"
+                            TextColor="Black"
+                            Placeholder="Pesquisar"
+                            PlaceholderColor="Black"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding SearchBarTxtValue}"/>
+
                         <Label
+                            Grid.Row="1"
+                            Text="{Binding LabelKm}"
+                            HorizontalTextAlignment="End"
+                            FontSize="15"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            Margin="0,10,15,0"/>
+
+                        <!--<Label
                             Text="Selecione a Distância: "
                             TextColor="Black"
                             FontAttributes="Bold"
@@ -35,105 +63,117 @@
                             HorizontalTextAlignment="Center"
                             CharacterSpacing="1"
                             Margin="80,0,80,0">
-                        </Picker>
+                        </Picker>-->
                     </Grid>
                 </StackLayout>
-                <Frame 
-                    HasShadow="True"
-                    BackgroundColor="#FFFFFF"
-                    BorderColor="Black"
-                    CornerRadius="10" 
-                    Grid.Row="1"
-                    Margin="0,0,0,0">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <SearchBar
-                            Margin="0,0,25,0"
-                            TextColor="Black"
-                            PlaceholderColor="Black"
-                            HorizontalTextAlignment="Center"
-                            Placeholder="Filtro"
-                            Text="{Binding SearchBarTxtValue}"/>
-                        <CollectionView
-                            VerticalScrollBarVisibility="Always"
-                            Margin="0,5,0,0"
-                            SelectionMode="Single"
-                            Grid.Row="3"
-                            SelectedItem="{Binding ResultSelected}"
-                            ItemsSource="{Binding Locais}"
-                            SelectionChanged="CollectionView_SelectionChanged">
-                            <CollectionView.ItemTemplate>
-                                <DataTemplate>
-                                    <Grid>
+                <Grid
+                    Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <CollectionView
+                        VerticalScrollBarVisibility="Always"
+                        Margin="0,5,0,0"
+                        SelectionMode="Single"
+                        Grid.Row="0"
+                        ItemsSource="{Binding Locais}"
+                        SelectionChanged="CollectionView_SelectionChanged">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,0,0,0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroup Name="CommonStates">
+                                            <VisualState Name="Normal" />
+                                            <VisualState 
+                                                Name="Selected">
+                                                <VisualState.Setters>
+                                                    <Setter 
+                                                        Property="BackgroundColor"
+                                                        Value="White" />
+                                                </VisualState.Setters>
+                                            </VisualState>
+                                        </VisualStateGroup>
+                                    </VisualStateManager.VisualStateGroups>
+                                    <Grid
+                                        Margin="0,15,0,0">
                                         <Grid.RowDefinitions>
-                                            <RowDefinition Height="150"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
                                         </Grid.RowDefinitions>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <VisualStateManager.VisualStateGroups>
-                                            <VisualStateGroup Name="CommonStates">
-                                                <VisualState Name="Normal" />
-                                                <VisualState 
-                                                    Name="Selected">
-                                                    <VisualState.Setters>
-                                                        <Setter 
-                                                            Property="BackgroundColor"
-                                                            Value="White" />
-                                                    </VisualState.Setters>
-                                                </VisualState>
-                                            </VisualStateGroup>
-                                        </VisualStateManager.VisualStateGroups>
-                                        <pancake:PancakeView
+                                        <Image 
+                                            Source="gas_black_no_circle.png"
+                                            HeightRequest="40"
+                                            WidthRequest="40"
+                                            HorizontalOptions="Start"
+                                            Margin="0,0,0,10"
+                                            VerticalOptions="Center"/>
+                                        <Label 
+                                            HorizontalTextAlignment="Start"
+                                            VerticalTextAlignment="Center"
+                                            Margin="50,0,0,10"
+                                            Text="{Binding name}"
+                                            FontSize="15"
+                                            TextColor="Black"/>
+                                        <Image
+                                            Source="{Binding ImgSource}"
+                                            BackgroundColor="Transparent"
+                                            HeightRequest="20"
+                                            WidthRequest="20"
+                                            HorizontalOptions="End"
+                                            Margin="0,0,0,10"/>
+                                        <BoxView
+                                            IsVisible="{Binding IsBoxViewVisible}"
+                                            Color="LightGray"
+                                            HorizontalOptions="FillAndExpand"
+                                            HeightRequest="0.3"
+                                            Grid.Row="1"/>
+                                        <Frame
+                                            HasShadow="True"
+                                            CornerRadius="5"
                                             BackgroundColor="#f0f1f5"
-                                            CornerRadius="5,5,5,5"
-                                            Margin="25,15,25,0">
+                                            Grid.Row="2"
+                                            IsVisible="{Binding IsSelected}">
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="GoToMap_Tapped"/>
+                                            </Frame.GestureRecognizers>
                                             <Grid
-                                                Margin="10">
-                                                <Grid.RowDefinitions>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
-                                                    <RowDefinition Height="Auto"/>
-                                                </Grid.RowDefinitions>
-                                                <Image 
-                                                    Source="{Binding icon}"
-                                                    HeightRequest="35"
-                                                    WidthRequest="50"
-                                                    HorizontalOptions="End"/>
-                                                <Label 
-                                                    HorizontalTextAlignment="Center"
-                                                    Margin="0,0,35,0"
-                                                    Text="{Binding name}"
+                                                RowDefinitions="Auto, Auto, Auto">
+                                                <Label
                                                     FontAttributes="Bold"
-                                                    FontSize="17"
+                                                    TextDecorations="Underline"
+                                                    Text="Endereço"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalTextAlignment="Center"
                                                     TextColor="Black"/>
                                                 <Label 
-                                                    Margin="0,10,0,0"
+                                                    Margin="10,10,0,0"
                                                     Text="{Binding vicinity}"
                                                     TextColor="Black"
-                                                    HorizontalTextAlignment="Center"
+                                                    HorizontalTextAlignment="Start"
+                                                    VerticalTextAlignment="Center"
                                                     Grid.Row="1"/>
-
                                                 <Image
                                                     Source="right_icon.png"
-                                                    Grid.Row="1"
+                                                    Grid.Row="2"
                                                     HorizontalOptions="End"
-                                                    HeightRequest="25"
-                                                    Margin="0,40,0,0"
-                                                    WidthRequest="25"/>
+                                                    HeightRequest="20"
+                                                    Margin="0,0,5,5"
+                                                    WidthRequest="20"/>
                                             </Grid>
-                                        </pancake:PancakeView>
+                                        </Frame>
                                     </Grid>
-                                </DataTemplate>
-                            </CollectionView.ItemTemplate>
-                        </CollectionView>
-                    </Grid>
-                </Frame>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
             </Grid>
             <ContentView 
                 AbsoluteLayout.LayoutFlags="All"
@@ -150,6 +190,14 @@
                         IsVisible="{Binding IsLoading}"
                         IsRunning="{Binding IsLoading}"
                         Color="White"/>
+
+            <ImageButton Source="add_km_icon.png"
+                         HeightRequest="25"
+                         WidthRequest="25"
+                        BackgroundColor="Transparent"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"  
+                        AbsoluteLayout.LayoutBounds=".95,.95,55,80"
+                         Clicked="ImageButton_Clicked_1"/>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

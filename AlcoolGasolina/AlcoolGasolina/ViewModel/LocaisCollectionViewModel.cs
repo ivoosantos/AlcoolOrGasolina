@@ -1,4 +1,5 @@
-﻿using App5.DependencyServices;
+﻿using AlcoolGasolina.Model;
+using App5.DependencyServices;
 using App5.Model;
 using App5.Services;
 using Newtonsoft.Json;
@@ -43,6 +44,8 @@ namespace AlcoolGasolina.ViewModel
                     NotifyPropertyChanged(nameof(SelectedItemPicker));
 
                     _ = PesquisarClick();
+
+                    LabelKm = $"Distância atual: {value}";
                 }
             }
         }
@@ -66,7 +69,7 @@ namespace AlcoolGasolina.ViewModel
         private string[] distanciaItems;
         public string[] DistanciaItems
         {
-            get => new string[] { "1 KM", "2 KM", "3 KM", "4 KM", "5 KM", "6 KM", "7 KM", "8 KM", "9 KM", "10 KM" };
+            get => new string[] { "5 Km", "10 Km", "15 Km" };
             set
             {
                 if (distanciaItems != value)
@@ -91,21 +94,35 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        private Result resultSelected;
-        public Result ResultSelected
+        private string labelKm;
+        public string LabelKm
         {
-            get { return resultSelected; }
+            get { return labelKm; }
             set
             {
-                if (resultSelected != value)
+                if (labelKm != value)
                 {
-                    resultSelected = value;
-
-                    if (value != null)
-                        _ = GetSelectedItem(value);
+                    labelKm = value;
+                    NotifyPropertyChanged(nameof(LabelKm));
                 }
             }
         }
+
+        //private Result resultSelected;
+        //public Result ResultSelected
+        //{
+        //    get { return resultSelected; }
+        //    set
+        //    {
+        //        if (resultSelected != value)
+        //        {
+        //            resultSelected = value;
+
+        //            if (value != null)
+        //                _ = GetSelectedItem(value);
+        //        }
+        //    }
+        //}
 
         private bool isLoading;
         public bool IsLoading
@@ -151,7 +168,7 @@ namespace AlcoolGasolina.ViewModel
 
         private void InitializePicker()
         {
-            SelectedItemPicker = "5 KM";
+            SelectedItemPicker = "5 Km";
         }
 
         private async Task PesquisarClick()
@@ -182,8 +199,14 @@ namespace AlcoolGasolina.ViewModel
                     Locais = new ObservableCollection<Result>();
 
                     foreach (var item in listaResultadoPesquisa)
-                        Locais.Add(item);
+                    {
+                        item.ImgSource = "arrow_down.png";
+                        item.IsBoxViewVisible = true;
 
+                        Locais.Add(item);
+                    }
+                        
+                        
                     locaisLista = Locais.ToList();
 
                     CallToastMessage($"Total de: {Locais.Count} postos encontrados!");
@@ -205,7 +228,7 @@ namespace AlcoolGasolina.ViewModel
             SliderValue = value;
         }
 
-        private async Task GetSelectedItem(Result value)
+        public async Task GoToMap(Result value)
         {
             var options = new MapLaunchOptions
             {
@@ -214,7 +237,6 @@ namespace AlcoolGasolina.ViewModel
             };
 
             await Map.OpenAsync(value.geometry.location.lat, value.geometry.location.lng, options);
-            ResultSelected = null;
         }
 
         public void StartLoading()
@@ -229,8 +251,12 @@ namespace AlcoolGasolina.ViewModel
 
         private double AjustarStringToDouble()
         {
-            double resultado = double.Parse(SelectedItemPicker.Replace("KM", "").Trim()) * 1000;
-            return resultado;
+            try
+            {
+                double resultado = double.Parse(SelectedItemPicker.Replace("Km", "").Trim()) * 1000;
+                return resultado;
+            }
+            catch { return default; }
         }
 
         public void CallToastMessage(string message)
@@ -255,7 +281,10 @@ namespace AlcoolGasolina.ViewModel
                 var filteredItems = locaisLista.Where(x => x.name.ToUpperInvariant().Contains(text.ToUpperInvariant())).ToList();
 
                 foreach (var value in filteredItems)
+                {
                     Locais.Add(value);
+                }
+                    
             }
             catch (Exception ex)
             {

@@ -47,10 +47,10 @@ namespace App5.Services
         {
             try
             {
-                if (!DependencyService.Get<ILocation>().IsEnabled())
-                {
-                    DependencyService.Get<ILocation>().OpenSettings().Wait();
-                }
+                //if (!DependencyService.Get<ILocation>().IsEnabled())
+                //{
+                //    DependencyService.Get<ILocation>().OpenSettings().Wait();
+                //}
 
                 Location location = await Geolocation.GetLocationAsync();
 
