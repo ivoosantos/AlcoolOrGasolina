@@ -10,7 +10,7 @@
              >
 
     <ContentPage.Content>
-        <ScrollView BackgroundColor="#bdbdbd">
+        <ScrollView BackgroundColor="#fafafa">
             <StackLayout>
                 <Alcool:PancakeView BorderColor="BlanchedAlmond"
                                     BackgroundColor="#212121"
@@ -24,11 +24,35 @@
                     </StackLayout>
                 </Alcool:PancakeView>
                 
-                <StackLayout Spacing="0" Margin="25,-50,25,0">
+                <StackLayout Spacing="0" Margin="25,10,25,0">
+                    <StackLayout>
+                        <Label Text="Total do Álcool: " TextColor="#000000" FontSize="Title"/>
+                        <Label Text="{Binding MessageValAlcool}"
+                                   FontSize="Large"
+                                   FontAttributes="Bold" TextColor="#f4511e"/>
+                        <Label Text="{Binding MessageAlcool}" TextColor="#e64a19" FontSize="Subtitle"/>
+                        <BoxView Color="Black"
+                                     HeightRequest="2"
+                                     HorizontalOptions="Fill"/>
+                        <!--<Label Text="Se beber não dirija!"/>-->
+                    </StackLayout>
 
-                    <Frame BorderColor="Gray" Margin="0,0,0,30"
+
+                    <StackLayout Margin="0,15,0,10">
+                        <Label Text="Total da Gasolina: " TextColor="#000000" FontSize="Title"/>
+                        <Label Text="{Binding MessageValGasolina}"
+                                   FontSize="Large"
+                                   FontAttributes="Bold" TextColor="#f4511e"/>
+                        <Label Text="{Binding MessageGasolina}" TextColor="#e64a19" FontSize="Subtitle"/>
+                        <BoxView Color="Black"
+                                     HeightRequest="2"
+                                     HorizontalOptions="Fill" />
+                        
+                    </StackLayout>
+
+                    <!--<Frame BorderColor="#eceff1" Margin="0,0,0,30"
                            CornerRadius="10"
-                           Padding="8" BackgroundColor="#bdbdbd">
+                           Padding="8" BackgroundColor="#eceff1">
                         <StackLayout>
                             <Label Text="Total do Álcool: " TextColor="#000000"/>
                             <Label Text="{Binding MessageValAlcool}"
@@ -56,11 +80,12 @@
                             <Label Text="{Binding MessageGasolina}"/>
                             <Label Text="Frames can wrap more complex layouts to create more complex UI components, such as this card!"/>
                         </StackLayout>
-                    </Frame>
+                    </Frame>-->
 
+                    <Label Text="Se beber não dirija!" HorizontalTextAlignment="Center"/>
                     <StackLayout 
                         Orientation="Horizontal" 
-                        Margin="10,0,10,10">
+                        Margin="10,15,10,10">
                         <!--<Button Text="Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
                             Command="{Binding VoltaInicio}"/>-->
