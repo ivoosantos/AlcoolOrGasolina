@@ -31,8 +31,8 @@
                                 FontSize="Large"
                                 FontAttributes="Bold" TextColor="#f4511e"/>
                         <Label Text="{Binding MessageCompensa}" FontSize="Subtitle" TextColor="#e64a19"/>
-                        <BoxView Color="Black"
-                                    HeightRequest="2"
+                        <BoxView Color="LightGray"
+                                    HeightRequest=".5"
                                     HorizontalOptions="Fill" Margin="0,20,0,0"/>
                         
                     </StackLayout>

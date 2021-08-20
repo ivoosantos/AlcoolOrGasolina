@@ -31,21 +31,21 @@
                                    FontSize="Large"
                                    FontAttributes="Bold" TextColor="#f4511e"/>
                         <Label Text="{Binding MessageAlcool}" TextColor="#e64a19" FontSize="Subtitle"/>
-                        <BoxView Color="Black"
-                                     HeightRequest="2"
+                        <BoxView Color="LightGray"
+                                     HeightRequest=".5"
                                      HorizontalOptions="Fill"/>
                         <!--<Label Text="Se beber não dirija!"/>-->
                     </StackLayout>
 
 
-                    <StackLayout Margin="0,15,0,10">
+                    <StackLayout Margin="0,15,0,8">
                         <Label Text="Total da Gasolina: " TextColor="#000000" FontSize="Title"/>
                         <Label Text="{Binding MessageValGasolina}"
                                    FontSize="Large"
                                    FontAttributes="Bold" TextColor="#f4511e"/>
                         <Label Text="{Binding MessageGasolina}" TextColor="#e64a19" FontSize="Subtitle"/>
-                        <BoxView Color="Black"
-                                     HeightRequest="2"
+                        <BoxView Color="LightGray"
+                                     HeightRequest=".5"
                                      HorizontalOptions="Fill" />
                         
                     </StackLayout>
@@ -82,18 +82,28 @@
                         </StackLayout>
                     </Frame>-->
 
-                    <Label Text="Se beber não dirija!" HorizontalTextAlignment="Center"/>
-                    <StackLayout 
+                    <StackLayout Spacing="0" Padding="15">
+                        <Label Text="Se beber não dirija!" HorizontalTextAlignment="Center" FontSize="Body"/>
+                    </StackLayout>
+                    <!--<StackLayout 
                         Orientation="Horizontal" 
                         Margin="10,15,10,10">
-                        <!--<Button Text="Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                        --><!--<Button Text="Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
-                            Command="{Binding VoltaInicio}"/>-->
+                            Command="{Binding VoltaInicio}"/>--><!--
                         <Button 
                             Text="Recalcular" 
                             BackgroundColor="#424242"
                             HorizontalOptions="FillAndExpand" 
                             TextColor="WhiteSmoke" 
+                            BorderRadius="15" FontSize="Medium"
+                            Command="{Binding ResultCommand}"/>
+                    </StackLayout>-->
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="  Início " BackgroundColor="#37474f" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
+                            BorderRadius="15" FontSize="Medium"
+                            Command="{Binding VoltaInicio}"/>
+                        <Button Text="Recalcular" BackgroundColor="#424242" HorizontalOptions="FillAndExpand" TextColor="WhiteSmoke" 
                             BorderRadius="15" FontSize="Medium"
                             Command="{Binding ResultCommand}"/>
                     </StackLayout>

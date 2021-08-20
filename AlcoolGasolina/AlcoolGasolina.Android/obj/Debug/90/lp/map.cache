@@ -1,6 +1,8 @@
 FormsViewGroup.dll
 GalaSoft.MvvmLight.Platform.dll
 Rg.Plugins.Popup.dll
+Sharpnado.Shadows.Android.dll
+Sharpnado.Tabs.Android.dll
 Xamarin.Android.Arch.Core.Common.dll
 Xamarin.Android.Arch.Core.Runtime.dll
 Xamarin.Android.Arch.Lifecycle.Common.dll
@@ -47,5 +49,3 @@ Xamarin.GooglePlayServices.Base.dll
 Xamarin.GooglePlayServices.Basement.dll
 Xamarin.GooglePlayServices.Maps.dll
 Xamarin.GooglePlayServices.Tasks.dll
-Sharpnado.Shadows.Android.dll
-Sharpnado.Tabs.Android.dll
