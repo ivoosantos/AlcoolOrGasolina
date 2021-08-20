@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[2.0.0.12, )"
             },
+            "Sharpnado.Tabs": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.3.1, )"
@@ -136,6 +140,10 @@
             "ServiceStack.Interfaces": {
               "target": "Package",
               "version": "[5.9.0, )"
+            },
+            "Sharpnado.Tabs": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

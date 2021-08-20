@@ -15,12 +15,16 @@
             Title="Menu"
             Padding="0">
             <ContentPage.Content>
-                <Grid BackgroundColor="#1C1C1C">
+                <Grid BackgroundColor="#1C1C1C"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="175"/>
+                        <RowDefinition Height="100"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <StackLayout
+                        Margin="0,100,0,0"
                         HorizontalOptions="Center"
                         VerticalOptions="Center">
                         <Grid ColumnSpacing="50">
@@ -28,24 +32,21 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
                             <Frame
-                                Grid.Column="1"
+                                HorizontalOptions="CenterAndExpand"
                                 CornerRadius="100"
-                                HeightRequest="50"
-                                WidthRequest="50"
+                                HeightRequest="150"
+                                WidthRequest="150"
                                 Margin="0,0,0,25"
                                 BackgroundColor="#FFF">
                                 <Label
                                     Text="Imagem..."
+                                    HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"
                                     TextColor="Black"
                                     FontSize="13"/>
                             </Frame>
-                            <StackLayout
+                            <!--<StackLayout
                                 Grid.Row="1"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center">
@@ -85,17 +86,19 @@
                                     FontSize="17"
                                     TextColor="White"
                                     Text="Info"/>
-                            </StackLayout>
+                            </StackLayout>-->
                         </Grid>
                     </StackLayout>
                     <StackLayout
                         HorizontalOptions="CenterAndExpand"
                         VerticalOptions="CenterAndExpand"
                         Margin="0,10,0,0"
-                        Grid.Row="1">
+                        Grid.Row="2">
                         <ListView 
                             x:Name="listview"
                             SeparatorColor="#FFF"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="CenterAndExpand"
                             HasUnevenRows="True"
                             BackgroundColor="#1C1C1C"
                             ItemTapped="listview_ItemTapped">

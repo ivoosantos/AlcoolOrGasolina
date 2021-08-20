@@ -33,7 +33,7 @@ namespace AlcoolGasolina.Droid
                 return;
 
             Element.SelectedTabColor = System.Drawing.Color.FromArgb(0, 0, 0);
-            Element.UnselectedTabColor = System.Drawing.Color.FromArgb(211, 211, 211);
+            Element.UnselectedTabColor = System.Drawing.Color.FromArgb(128,128,128);
 
             base.OnElementChanged(e);
         }

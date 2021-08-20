@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static App5.Model.Business;
 
 namespace AlcoolGasolina.View
 {
@@ -25,6 +26,7 @@ namespace AlcoolGasolina.View
         protected override void OnAppearing()
         {
             locaisListViewModel.OnAppearingViewModel();
+
             base.OnAppearing();
         }
 
@@ -34,8 +36,40 @@ namespace AlcoolGasolina.View
 
             if (cView.SelectedItem != null)
             {
+                var item = locaisListViewModel.Locais.Where(x => x.place_id == ((Result)cView.SelectedItem).place_id).FirstOrDefault();
+
+                int index = locaisListViewModel.Locais.IndexOf(item);
+
+                if (!((Result)cView.SelectedItem).IsSelected)
+                {
+                    item.IsSelected = true;
+                    item.IsBoxViewVisible = false;
+                    item.ImgSource = "arrow_up.png";
+
+                    locaisListViewModel.Locais[index] = item;
+                }
+                else
+                {
+                    item.IsSelected = false;
+                    item.IsBoxViewVisible = true;
+                    item.ImgSource = "arrow_down.png";
+
+                    locaisListViewModel.Locais[index] = item;
+                }
+
                 cView.SelectedItem = null;
             }
+        }
+
+        private async void GoToMap_Tapped(object sender, EventArgs e)
+        {
+            Frame frame = sender as Frame;
+            await locaisListViewModel.GoToMap((Result)frame.BindingContext);
+        }
+
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            picker.Focus();
         }
     }
 }
