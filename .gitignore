@@ -192,11 +192,4 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-#No update
-*.vscode/settings.json
-*.cache
-*.dll
-*.pdb
-*.suo
-*obj/
-*bin/
+.vscode/settings.json
