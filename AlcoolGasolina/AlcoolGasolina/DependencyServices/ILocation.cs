@@ -7,7 +7,7 @@ namespace App5.DependencyServices
 {
     public interface ILocation
     {
-        void OpenSettings();
+        Task OpenSettings();
         bool IsEnabled();
     }
 }

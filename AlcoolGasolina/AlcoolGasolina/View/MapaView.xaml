@@ -4,30 +4,10 @@
              x:Class="AlcoolGasolina.View.MapaView"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
     <ContentPage.Content>
-        <AbsoluteLayout>
-            <maps:Map
-                    AbsoluteLayout.LayoutFlags="All"
-                    AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                    x:Name="Map"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    MapType="Street"
-                    IsShowingUser="True"/>
-            <ContentView 
-                AbsoluteLayout.LayoutFlags="All"
-                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                BackgroundColor="Black"
-                Opacity="0.45"
-                IsVisible="{Binding IsLoading}">
-            </ContentView>
-            <ActivityIndicator
-                        AbsoluteLayout.LayoutFlags="All"
-                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"
-                        IsVisible="{Binding IsLoading}"
-                        IsRunning="{Binding IsLoading}"
-                        Color="Black"/>
-        </AbsoluteLayout>
+        <maps:Map
+                x:Name="Map"
+                VerticalOptions="FillAndExpand"
+                MapType="Street"
+                IsShowingUser="True"/>
     </ContentPage.Content>
 </ContentPage> 
