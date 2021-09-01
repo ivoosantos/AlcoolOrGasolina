@@ -14,4 +14,4 @@
     <pages:LocaisCollectionView 
         Title="Pesquisar"
         IconImageSource="search_icon.png"/>
-</TabbedPage>
+</TabbedPage> 

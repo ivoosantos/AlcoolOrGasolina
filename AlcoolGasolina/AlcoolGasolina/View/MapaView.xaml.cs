@@ -68,22 +68,49 @@ namespace AlcoolGasolina.View
 
         protected override async void OnAppearing()
         {
-            if (isFirstTime)
+            base.OnAppearing();
+
+            try
             {
                 IsLoading = true;
 
-                await CheckLocation();
+                if (!DependencyService.Get<ILocation>().IsEnabled())
+                {
+                    await EnableLocation();
 
-                await GetDeviceLocation();
+                    IsLoading = false;
+                    isFirstTime = true;
 
-                await MapLocation();
+                    return;
+                }
 
-                isFirstTime = false;
+                if (isFirstTime)
+                {
+                    await GetDeviceLocation();
+
+                    await MapLocation();
+
+                    isFirstTime = false;
+                }
 
                 IsLoading = false;
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
 
-            base.OnAppearing();
+                IsLoading = false;
+            }
+        }
+
+        private async Task EnableLocation()
+        {
+            bool resp = await DisplayAlert("Atenção", "Habilite seu GPS", "Configurações", "Cancelar");
+
+            if (resp)
+            {
+                DependencyService.Get<ILocation>().OpenSettings();
+            }
         }
 
         private async Task MapLocation()
@@ -92,9 +119,9 @@ namespace AlcoolGasolina.View
                                 new Position(double.Parse(latitude), double.Parse(longitude)),
                                 Distance.FromKilometers(1)));
 
-            var result = await getLocation.GetAsync("1000");
+            var gasStationsNearby = await getLocation.GetAsync("1000");
 
-            foreach (var item in result.results)
+            foreach (var item in gasStationsNearby.results)
             {
                 var pin = new Pin()
                 {
@@ -105,18 +132,8 @@ namespace AlcoolGasolina.View
 
                 Map.Pins.Add(pin);
             }
-        }
 
-        private async Task CheckLocation()
-        {
-            if (!DependencyService.Get<ILocation>().IsEnabled())
-            {
-                var resp = await DisplayAlert("Atenção", "Habilite seu GPS", "Configurações", "Cancelar");
-                if (resp)
-                {
-                    await DependencyService.Get<ILocation>().OpenSettings();
-                }
-            }
+            DependencyService.Get<IToastMessage>().ShowMessage($"{Map.Pins.Count} postos próximos a você!");
         }
     }
 }

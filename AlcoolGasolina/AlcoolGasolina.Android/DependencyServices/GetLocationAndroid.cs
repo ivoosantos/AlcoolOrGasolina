@@ -29,7 +29,7 @@ namespace AlcoolGasolina.Droid.DependencyServices
         }
 
         [Obsolete]
-        public async Task OpenSettings()
+        public async void OpenSettings()
         {
             if (LM.IsProviderEnabled(LocationManager.GpsProvider) == false)
             {

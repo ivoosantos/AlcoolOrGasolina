@@ -108,22 +108,6 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        //private Result resultSelected;
-        //public Result ResultSelected
-        //{
-        //    get { return resultSelected; }
-        //    set
-        //    {
-        //        if (resultSelected != value)
-        //        {
-        //            resultSelected = value;
-
-        //            if (value != null)
-        //                _ = GetSelectedItem(value);
-        //        }
-        //    }
-        //}
-
         private bool isLoading;
         public bool IsLoading
         {
@@ -205,11 +189,10 @@ namespace AlcoolGasolina.ViewModel
 
                         Locais.Add(item);
                     }
-                        
-                        
+
                     locaisLista = Locais.ToList();
 
-                    CallToastMessage($"Total de: {Locais.Count} postos encontrados!");
+                    CallToastMessage($"{Locais.Count} postos encontrados!");
                 }
                 else
                 {
