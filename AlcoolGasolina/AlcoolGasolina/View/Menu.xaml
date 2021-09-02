@@ -5,11 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="AlcoolGasolina.View.Menu">
-
-    <MasterDetailPage.ToolbarItems>
+    <!--<MasterDetailPage.ToolbarItems>
         <ToolbarItem IconImageSource="options.png"/>
-    </MasterDetailPage.ToolbarItems>
-
+    </MasterDetailPage.ToolbarItems>-->
     <MasterDetailPage.Master>
         <ContentPage 
             Title="Menu"

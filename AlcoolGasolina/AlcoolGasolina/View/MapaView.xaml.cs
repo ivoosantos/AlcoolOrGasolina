@@ -68,20 +68,28 @@ namespace AlcoolGasolina.View
 
         protected override async void OnAppearing()
         {
+            IsLoading = true;
+
+            if (!DependencyService.Get<ILocation>().IsEnabled())
+            {
+                await EnableLocation();
+
+                isFirstTime = true;
+                IsLoading = false;
+                return;
+            }
+
             if (isFirstTime)
             {
-                IsLoading = true;
-
-                await CheckLocation();
-
                 await GetDeviceLocation();
 
                 await MapLocation();
 
                 isFirstTime = false;
 
-                IsLoading = false;
             }
+
+            IsLoading = false;
 
             base.OnAppearing();
         }
@@ -107,15 +115,12 @@ namespace AlcoolGasolina.View
             }
         }
 
-        private async Task CheckLocation()
+        private async Task EnableLocation()
         {
-            if (!DependencyService.Get<ILocation>().IsEnabled())
+            var resp = await DisplayAlert("Atenção", "Habilite seu GPS", "Configurações", "Cancelar");
+            if (resp)
             {
-                var resp = await DisplayAlert("Atenção", "Habilite seu GPS", "Configurações", "Cancelar");
-                if (resp)
-                {
-                    await DependencyService.Get<ILocation>().OpenSettings();
-                }
+                await DependencyService.Get<ILocation>().OpenSettings();
             }
         }
     }

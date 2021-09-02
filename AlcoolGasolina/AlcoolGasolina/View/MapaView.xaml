@@ -4,10 +4,30 @@
              x:Class="AlcoolGasolina.View.MapaView"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
     <ContentPage.Content>
-        <maps:Map
+        <AbsoluteLayout>
+            <maps:Map
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                 x:Name="Map"
                 VerticalOptions="FillAndExpand"
                 MapType="Street"
                 IsShowingUser="True"/>
+            <ActivityIndicator
+                        AbsoluteLayout.LayoutFlags="All"
+                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsVisible="{Binding IsLoading}"
+                        IsRunning="{Binding IsLoading}"
+                        Color="White"/>
+
+            <ImageButton Source="add_km_icon.png"
+                         HeightRequest="25"
+                         WidthRequest="25"
+                        BackgroundColor="Transparent"
+                        AbsoluteLayout.LayoutFlags="PositionProportional"  
+                        AbsoluteLayout.LayoutBounds=".95,.95,55,80"
+                         Clicked="ImageButton_Clicked_1"/>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage> 

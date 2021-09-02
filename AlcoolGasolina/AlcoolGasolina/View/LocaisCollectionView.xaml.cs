@@ -34,18 +34,19 @@ namespace AlcoolGasolina.View
         {
             CollectionView cView = sender as CollectionView;
 
+            Result ResultSelected = (Result)cView.SelectedItem;
+
             if (cView.SelectedItem != null)
             {
-                var item = locaisListViewModel.Locais.Where(x => x.place_id == ((Result)cView.SelectedItem).place_id).FirstOrDefault();
+                Result item = FindItem(ResultSelected);
 
-                int index = locaisListViewModel.Locais.IndexOf(item);
+                int index = FindIndex(item);
 
                 if (!((Result)cView.SelectedItem).IsSelected)
                 {
                     item.IsSelected = true;
                     item.IsBoxViewVisible = false;
                     item.ImgSource = "arrow_up.png";
-
                     locaisListViewModel.Locais[index] = item;
                 }
                 else
@@ -53,7 +54,6 @@ namespace AlcoolGasolina.View
                     item.IsSelected = false;
                     item.IsBoxViewVisible = true;
                     item.ImgSource = "arrow_down.png";
-
                     locaisListViewModel.Locais[index] = item;
                 }
 
@@ -64,12 +64,26 @@ namespace AlcoolGasolina.View
         private async void GoToMap_Tapped(object sender, EventArgs e)
         {
             Frame frame = sender as Frame;
+
             await locaisListViewModel.GoToMap((Result)frame.BindingContext);
         }
 
         private void ImageButton_Clicked_1(object sender, EventArgs e)
         {
             picker.Focus();
+        }
+
+        Result FindItem(Result result)
+        {
+            var itemResult = locaisListViewModel.Locais.Where(x => x.place_id == result.place_id).FirstOrDefault();
+            return itemResult;
+        }
+
+        int FindIndex(Result result)
+        {
+            var item = locaisListViewModel.Locais.Where(x => x.place_id == result.place_id).FirstOrDefault();
+            int index = locaisListViewModel.Locais.IndexOf(item);
+            return index;
         }
     }
 }
