@@ -14,13 +14,15 @@
           "Newtonsoft.Json": "13.0.1",
           "Rg.Plugins.Popup": "2.0.0.12",
           "ServiceStack.Interfaces": "5.9.0",
+          "Sharpnado.Tabs": "2.1.0",
           "Xamarin.Essentials": "1.3.1",
           "Xamarin.Forms": "4.8.0.1821",
           "Xamarin.Forms.BehaviorValidationPack": "1.1.0",
           "Xamarin.Forms.ConvertersPack": "1.0.0",
           "Xamarin.Forms.Maps": "4.8.0.1821",
           "Xamarin.Forms.MaskedEntry": "1.0.0",
-          "Xamarin.Forms.PancakeView": "2.0.1.698"
+          "Xamarin.Forms.PancakeView": "2.0.1.698",
+          "Mono.Android": "0.0.0.0"
         },
         "runtime": {
           "AlcoolGasolina.dll": {}
@@ -80,6 +82,39 @@
           "lib/netstandard2.0/ServiceStack.Interfaces.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.9.0.0"
+          }
+        }
+      },
+      "Sharpnado.Shadows/1.2.0": {
+        "dependencies": {
+          "ThomasLevesque.WeakEvent": "4.1.0",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.Shadows.dll": {
+            "assemblyVersion": "1.2.0.0",
+            "fileVersion": "1.2.0.0"
+          }
+        }
+      },
+      "Sharpnado.Tabs/2.1.0": {
+        "dependencies": {
+          "Sharpnado.Shadows": "1.2.0",
+          "Sharpnado.TaskMonitor": "1.0.1",
+          "Xamarin.Forms": "4.8.0.1821"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.Tabs.dll": {
+            "assemblyVersion": "2.1.0.0",
+            "fileVersion": "2.1.0.0"
+          }
+        }
+      },
+      "Sharpnado.TaskMonitor/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Sharpnado.TaskMonitor.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
@@ -175,6 +210,14 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "ThomasLevesque.WeakEvent/4.1.0": {
+        "runtime": {
+          "lib/netstandard2.0/WeakEvent.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.1.0.0"
+          }
+        }
+      },
       "Xamarin.Essentials/1.3.1": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -257,6 +300,14 @@
             "fileVersion": "2.0.1.0"
           }
         }
+      },
+      "Mono.Android/0.0.0.0": {
+        "runtime": {
+          "Mono.Android.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -314,6 +365,27 @@
       "sha512": "sha512-0BiR1hd1eq5GY6xhKSYVnY2/3V6A0PPmLFhtBq3y8vbQaDcwPxWll6ix6cBkauQh4wm/DHCfnmUq/4NshEj1Jg==",
       "path": "servicestack.interfaces/5.9.0",
       "hashPath": "servicestack.interfaces.5.9.0.nupkg.sha512"
+    },
+    "Sharpnado.Shadows/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zjHTh6pZXpGb0viQ5wL5XtFrQNA5xeNzkveVAJvH8x7HLFRnUIXaJ6QzbUfeAdAL2nEAJSffcaeE3wQP6a6m0g==",
+      "path": "sharpnado.shadows/1.2.0",
+      "hashPath": "sharpnado.shadows.1.2.0.nupkg.sha512"
+    },
+    "Sharpnado.Tabs/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b3tdGEHtqXT5qvW4V/ZnIBKKMA8NZ5LYypbHsmjd1ViHfjh5kCy0+IbgSmLg12Obel7wt0iD+dZrny+A1wKCzQ==",
+      "path": "sharpnado.tabs/2.1.0",
+      "hashPath": "sharpnado.tabs.2.1.0.nupkg.sha512"
+    },
+    "Sharpnado.TaskMonitor/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ou7ff5tmFApSXHf0o7majjpR4u0vJUyEKJ5ILBAC5U594qUMGjhae180xWOO1aAjKzTGPZM5ZFvf4SOf+EzIJg==",
+      "path": "sharpnado.taskmonitor/1.0.1",
+      "hashPath": "sharpnado.taskmonitor.1.0.1.nupkg.sha512"
     },
     "System.ComponentModel/4.3.0": {
       "type": "package",
@@ -392,6 +464,13 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
+    "ThomasLevesque.WeakEvent/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mcp8UoYXWvPmud7UJmREULQLxLmX6SYet2pyZUHpcmIiku3JoqEilPUu9QeUZrV7fOCp0Pfva/VDhG+n3afGyg==",
+      "path": "thomaslevesque.weakevent/4.1.0",
+      "hashPath": "thomaslevesque.weakevent.4.1.0.nupkg.sha512"
+    },
     "Xamarin.Essentials/1.3.1": {
       "type": "package",
       "serviceable": true,
@@ -440,6 +519,11 @@
       "sha512": "sha512-wjem1ckhesY3UoD+rEpg6mysRG85RcO7hrXcFWpq2fKyTL4YKuH8GTmaaL87q/lyhvk0GCRoJFLgYcOJWsUk5w==",
       "path": "xamarin.forms.pancakeview/2.0.1.698",
       "hashPath": "xamarin.forms.pancakeview.2.0.1.698.nupkg.sha512"
+    },
+    "Mono.Android/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
