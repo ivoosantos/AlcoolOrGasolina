@@ -8,19 +8,36 @@ using System.ComponentModel;
 
 namespace AlcoolGasolina.ViewModel
 {
-    public class InicioViewModel
+    public class InicioViewModel : INotifyPropertyChanged
     {
-        public Armazenamento Armazenamento { get; set; }
-        public Command InicioCommand { get; set; }
+        Page _page;
 
-        public InicioViewModel()
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public Armazenamento Armazenamento { get; set; }
+        public Command BuscaPostoCommand { get; set; }
+
+        public InicioViewModel(Page page)
         {
+            _page = page;
+            InitializeCommand();
+        }
+
+        private void InitializeCommand()
+        {
+            BuscaPostoCommand = new Command(BuscarPosto);
         }
 
         public void IniciarConsulta()
         {
             //App.Current.MainPage = new NavigationPage(new View.InserirDados());
             ((NavigationPage)App.Current.MainPage).Navigation.PushAsync(new View.InserirDados());
+        }
+
+        public void BuscarPosto()
+        {
+            //App.Current.MainPage = new NavigationPage((Page)Activator.CreateInstance(typeof(View.MapasView)));
+            _page.Navigation.PushAsync(new View.MapasView());
         }
 
     }

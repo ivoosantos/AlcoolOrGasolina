@@ -10,8 +10,9 @@ namespace AlcoolGasolina
         {
             InitializeComponent();
 
-            //MainPage = new NavigationPage(new View.MenuLateral());
-            //MainPage = new View.MenuLateral();
+            Sharpnado.Tabs.Initializer.Initialize(false, false);
+            Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
+
             MainPage = new View.Menu();
         }
 

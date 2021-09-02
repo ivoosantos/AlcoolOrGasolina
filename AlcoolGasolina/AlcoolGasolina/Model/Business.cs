@@ -71,6 +71,9 @@ namespace App5.Model
             public int user_ratings_total { get; set; }
             public string vicinity { get; set; }
             public OpeningHours opening_hours { get; set; }
+            public bool IsSelected { get; set; }
+            public bool IsBoxViewVisible { get; set; } = true;
+            public string ImgSource { get; set; } = "arrow_down.png";
         }
 
         public class Root

@@ -1,6 +1,2 @@
-<<<<<<< HEAD
-AdbTarget=-s emulator-5554
-=======
-AdbTarget=-s 0431366752
->>>>>>> feature/MapaAjustes
+AdbTarget=-s 330048a20f744371
 AdbOptions=

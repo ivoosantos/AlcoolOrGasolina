@@ -12,6 +12,7 @@ using App5.Services;
 using App5.Model;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using App5.DependencyServices;
 
 namespace AlcoolGasolina.View
 {
@@ -71,6 +72,8 @@ namespace AlcoolGasolina.View
             {
                 IsLoading = true;
 
+                await CheckLocation();
+
                 await GetDeviceLocation();
 
                 await MapLocation();
@@ -79,7 +82,7 @@ namespace AlcoolGasolina.View
 
                 IsLoading = false;
             }
-            
+
             base.OnAppearing();
         }
 
@@ -101,6 +104,18 @@ namespace AlcoolGasolina.View
                 };
 
                 Map.Pins.Add(pin);
+            }
+        }
+
+        private async Task CheckLocation()
+        {
+            if (!DependencyService.Get<ILocation>().IsEnabled())
+            {
+                var resp = await DisplayAlert("Atenção", "Habilite seu GPS", "Configurações", "Cancelar");
+                if (resp)
+                {
+                    await DependencyService.Get<ILocation>().OpenSettings();
+                }
             }
         }
     }
