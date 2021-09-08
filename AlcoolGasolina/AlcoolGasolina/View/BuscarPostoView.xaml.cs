@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AlcoolGasolina.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MapasView : TabbedPage
+    public partial class BuscarPostoView : TabbedPage
     {
-        public MapasView()
+        public BuscarPostoView()
         {
             InitializeComponent();
         }

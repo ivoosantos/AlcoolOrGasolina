@@ -74,6 +74,10 @@ namespace App5.Model
             public bool IsSelected { get; set; }
             public bool IsBoxViewVisible { get; set; } = true;
             public string ImgSource { get; set; } = "arrow_down.png";
+            public string ImgStatusPosto { get; set; } = "green_clock_icon.png";
+            public bool IsImgOpenNowVisible { get; set; } = true;
+            public string IsOpenText { get; set; } = "Aberto";
+            public string HexStatusGasStation { get; set; }
         }
 
         public class Root

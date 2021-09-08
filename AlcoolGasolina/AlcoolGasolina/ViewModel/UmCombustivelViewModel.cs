@@ -35,39 +35,15 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        //public Decimal ValorCombustivel
-        //{
-        //    get { return valorCombustivel; }
-        //    set
-        //    {
-        //        if(valorCombustivel != value)
-        //        {
-        //            valorCombustivel = value;
-        //            OnPropertyChanged(nameof(ValorCombustivel));
-        //        }
-        //    }
-        //}
         public Decimal Valor { get; set; }
 
         private decimal kmPorlitro;
         public Decimal KmPorLitro { get; set; }
-        //public Decimal KmPorLitro 
-        //{
-        //    get { return kmPorlitro; } 
-        //    set
-        //    {
-        //        if(kmPorlitro != value)
-        //        {
-        //            kmPorlitro = value;
-        //            OnPropertyChanged(nameof(kmPorlitro));
-        //        }
-        //    }
-        //}
         public Decimal TotalViagem { get; set; }
         public void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             var handler = PropertyChanged;
-            if(handler != null)
+            if (handler != null)
             {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
@@ -93,19 +69,19 @@ namespace AlcoolGasolina.ViewModel
         {
             try
             {
-                //Valor = Decimal.Parse(Armazenamento.ValCombustivel.Replace("R$", "").Replace(" ", ""));
-                //valorCombustivel = Decimal.Parse(Armazenamento.ValCombustivel.Replace("R$", "").Replace(" ", ""));
-                if (valorCombustivel > 0)
+                if (valorCombustivel <= 0)
                 {
-                    Armazenamento.ValorCombustivel = CalcularCombustivel(valorCombustivel, KmPorLitro, TotalViagem);
-                    //valorCombustivel = CalcularCombustivel(valorCombustivel, KmPorLitro, TotalViagem);
-                    //App.Current.MainPage = new NavigationPage(new View.ResultCombNormal());
-                    _page.Navigation.PushAsync(new View.ResultCombNormal());
+                    _page.DisplayAlert("Atenção!", "O valor do Combustível não pode ser 0(zero)!", "OK");
+                    return;
                 }
-                else
+                else if (KmPorLitro <= 0)
                 {
-                    App.Current.MainPage.DisplayAlert("Atenção!", "O valor do Combustível não pode ser 0(zero)!", "OK");
+                    _page.DisplayAlert("Atenção!", "O valor do Km por litro não pode ser 0(zero)!", "OK");
+                    return;
                 }
+
+                Armazenamento.ValorCombustivel = CalcularCombustivel(valorCombustivel, KmPorLitro, TotalViagem);
+                _page.Navigation.PushAsync(new View.ResultCombNormal());
             }
             catch (Exception ex)
             {

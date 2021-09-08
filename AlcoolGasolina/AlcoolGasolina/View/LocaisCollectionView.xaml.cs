@@ -1,4 +1,5 @@
-﻿using AlcoolGasolina.ViewModel;
+﻿using AlcoolGasolina.Interface.ViewModel;
+using AlcoolGasolina.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,9 +64,15 @@ namespace AlcoolGasolina.View
 
         private async void GoToMap_Tapped(object sender, EventArgs e)
         {
-            Frame frame = sender as Frame;
+            try
+            {
+                Frame frame = sender as Frame;
 
-            await locaisListViewModel.GoToMap((Result)frame.BindingContext);
+                await locaisListViewModel.GoToMap((Result)frame.BindingContext);
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         private void ImageButton_Clicked_1(object sender, EventArgs e)

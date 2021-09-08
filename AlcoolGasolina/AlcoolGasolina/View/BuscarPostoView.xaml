@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            x:Class="AlcoolGasolina.View.MapasView"
+            x:Class="AlcoolGasolina.View.BuscarPostoView"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             android:TabbedPage.ToolbarPlacement="Bottom"
             xmlns:pages="clr-namespace:AlcoolGasolina.View"
             xmlns:tabs="clr-namespace:Sharpnado.Tabs;assembly=Sharpnado.Tabs"
             xmlns:sh="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
-            Title="Mapas">
+            Title="Buscar Posto">
     <pages:MapaView 
-        Title="Mapas"
+        Title="Mapa"
         IconImageSource="map_icon.png"/>
     <pages:LocaisCollectionView 
         Title="Pesquisar"

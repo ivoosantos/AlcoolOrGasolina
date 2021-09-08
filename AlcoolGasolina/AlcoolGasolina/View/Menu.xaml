@@ -22,7 +22,7 @@
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <StackLayout
-                        Margin="0,100,0,0"
+                        Margin="0,50,0,0"
                         HorizontalOptions="Center"
                         VerticalOptions="Center">
                         <Grid ColumnSpacing="30">
@@ -44,54 +44,7 @@
                                         WidthRequest="150"
                                     />
                                 </StackLayout>
-                                <!--<Label
-                                    Text="Imagem..."
-                                    TextColor="Black"
-                                    FontSize="13"/>-->
                             </Frame>
-                            <!--<StackLayout
-                                Grid.Column="0"
-                                Grid.Row="1"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center">
-                                <Label
-                                    FontSize="25"
-                                    TextColor="White"
-                                    Text="300"/>
-                                <Label
-                                    FontSize="15"
-                                    TextColor="White"
-                                    Text="Info"/>
-                            </StackLayout>
-                            <StackLayout
-                                Grid.Column="2"
-                                Grid.Row="1"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"
-                                >
-                                <Label
-                                    FontSize="25"
-                                    TextColor="White"
-                                    Text="200"/>
-                                <Label
-                                    FontSize="17"
-                                    TextColor="White"
-                                    Text="Info"/>
-                            </StackLayout>
-                            <StackLayout
-                                Grid.Row="1"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"
-                                Grid.Column="1">
-                                <Label
-                                    FontSize="25"
-                                    TextColor="White"
-                                    Text="300"/>
-                                <Label
-                                    FontSize="17"
-                                    TextColor="White"
-                                    Text="Info"/>
-                            </StackLayout>-->
                         </Grid>
                     </StackLayout>
                     <StackLayout

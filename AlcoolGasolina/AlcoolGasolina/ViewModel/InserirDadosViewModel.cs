@@ -16,14 +16,14 @@ namespace AlcoolGasolina.ViewModel
     public class InserirDadosViewModel : INotifyPropertyChanged
     {
         Page page;
-        
+
         public Armazenamento Armazenamento { get; set; }
-        
+
         private decimal valAlcool = 0m;
         private decimal valGasolina = 0m;
 
         private string valorAlcool;
-        public string ValorAlcool 
+        public string ValorAlcool
         {
             get { return valorAlcool; }
             set
@@ -38,11 +38,11 @@ namespace AlcoolGasolina.ViewModel
                         valAlcool = ConverterToDecimal(value);
                     }
                 }
-            } 
+            }
         }
 
         private string valorGasolina;
-        public string ValorGasolina 
+        public string ValorGasolina
         {
             get { return valorGasolina; }
             set
@@ -54,7 +54,7 @@ namespace AlcoolGasolina.ViewModel
 
                     if (!string.IsNullOrEmpty(value))
                     {
-                       valGasolina = ConverterToDecimal(value);
+                        valGasolina = ConverterToDecimal(value);
                     }
                 }
             }
@@ -97,26 +97,30 @@ namespace AlcoolGasolina.ViewModel
             {
                 if (valAlcool <= 0 && valGasolina <= 0)
                 {
-                    Armazenamento.MensagemErro = "O valor do álcool ou gasolina não pode ser 0(zero)!";
-                    App.Current.MainPage.DisplayAlert("Atenção!", Armazenamento.MensagemErro, "OK");
+                    page.DisplayAlert("Atenção!", "O valor do álcool ou gasolina não pode ser 0(zero)!", "OK");
+                    return;
                 }
-                else
+                else if (KmAlcool <= 0 || KmGasolina <= 0)
                 {
-                    Armazenamento.Alcool = CalcularAlcool(valAlcool, KmAlcool, TotalDaViagem);
-                    Armazenamento.Gasolina = CalcularGasolina(valGasolina, KmGasolina, TotalDaViagem);
-
-                    this.page.Navigation.PushAsync(new View.Resultado());
+                    page.DisplayAlert("Atenção!", "O valor do Km álcool ou Km gasolina não pode ser 0(zero)!", "OK");
+                    return;
                 }
+
+                Armazenamento.Alcool = CalcularAlcool(valAlcool, KmAlcool, TotalDaViagem);
+                Armazenamento.Gasolina = CalcularGasolina(valGasolina, KmGasolina, TotalDaViagem);
+
+                page.Navigation.PushAsync(new View.Resultado());
             }
             catch (Exception ex)
             {
-                App.Current.MainPage.DisplayAlert("ERRO:", ex.ToString(), "OK");
+                page.DisplayAlert("ERRO:", ex.ToString(), "OK");
             }
         }
 
         private static decimal CalcularAlcool(decimal vA, Decimal kmA, Decimal kmT)
         {
             Decimal Retorno = 0.00m;
+
             var div = kmT / kmA;
             if (div <= 1)
                 Retorno = vA;
@@ -129,8 +133,10 @@ namespace AlcoolGasolina.ViewModel
         private static decimal CalcularGasolina(decimal vG, Decimal kmG, Decimal kmT)
         {
             Decimal Retorno = 0.00m;
+
             var div = kmT / kmG;
-            if(div <= 1)
+
+            if (div <= 1)
                 Retorno = vG;
             else
                 Retorno = vG * div;

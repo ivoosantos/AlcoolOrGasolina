@@ -43,7 +43,7 @@ namespace AlcoolGasolina.View
                 },
                 new ItemMenuLateral()
                 {
-                    Title = "Mapas",
+                    Title = "Buscar Posto",
                     Icon = "Map.png"
                 }
             };
@@ -72,8 +72,8 @@ namespace AlcoolGasolina.View
                     IsPresented = false;
                     break;
 
-                case "Mapas":
-                    Detail = new NavigationPage(new MapasView());
+                case "Buscar Posto":
+                    Detail = new NavigationPage(new BuscarPostoView());
                     IsPresented = false;
                     break;
             }

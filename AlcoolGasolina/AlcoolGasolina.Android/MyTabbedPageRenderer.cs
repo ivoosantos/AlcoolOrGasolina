@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
-[assembly: ExportRenderer(typeof(MapasView), typeof(MyTabbedPageRenderer))]
+[assembly: ExportRenderer(typeof(BuscarPostoView), typeof(MyTabbedPageRenderer))]
 namespace AlcoolGasolina.Droid
 {
     [Obsolete]
@@ -32,7 +32,8 @@ namespace AlcoolGasolina.Droid
             if (e.NewElement == null || e.OldElement != null)
                 return;
 
-            Element.SelectedTabColor = System.Drawing.Color.FromArgb(0, 0, 0);
+            Element.BackgroundColor = System.Drawing.Color.FromArgb(28,28,28);
+            Element.SelectedTabColor = System.Drawing.Color.FromArgb(255, 255, 255);
             Element.UnselectedTabColor = System.Drawing.Color.FromArgb(128,128,128);
 
             base.OnElementChanged(e);

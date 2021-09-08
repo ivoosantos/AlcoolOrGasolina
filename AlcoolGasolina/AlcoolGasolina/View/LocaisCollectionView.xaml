@@ -38,7 +38,6 @@
                             PlaceholderColor="Black"
                             HorizontalTextAlignment="Center"
                             Text="{Binding SearchBarTxtValue}"/>
-
                         <Label
                             Grid.Row="1"
                             Text="{Binding LabelKm}"
@@ -47,23 +46,6 @@
                             TextColor="Black"
                             FontAttributes="Bold"
                             Margin="0,10,15,0"/>
-
-                        <!--<Label
-                            Text="Selecione a Distância: "
-                            TextColor="Black"
-                            FontAttributes="Bold"
-                            Margin="0,0,0,0"
-                            FontSize="15"
-                            HorizontalTextAlignment="Center"/>
-                        <Picker
-                            ItemsSource="{Binding DistanciaItems}"
-                            TextColor="Black"
-                            SelectedItem="{Binding SelectedItemPicker}"
-                            Grid.Row="1"
-                            HorizontalTextAlignment="Center"
-                            CharacterSpacing="1"
-                            Margin="80,0,80,0">
-                        </Picker>-->
                     </Grid>
                 </StackLayout>
                 <Grid
@@ -128,6 +110,21 @@
                                             WidthRequest="20"
                                             HorizontalOptions="End"
                                             Margin="0,0,0,10"/>
+                                        <Image
+                                            Source="{Binding ImgStatusPosto}"
+                                            IsVisible="{Binding IsImgOpenNowVisible}"
+                                            HorizontalOptions="End"
+                                            HeightRequest="25"
+                                            Margin="0,0,20,10"
+                                            WidthRequest="25"/>
+                                        <Label 
+                                            FontSize="13"
+                                            Margin="0,0,45,10"
+                                            FontAttributes="Bold"
+                                            Text="{Binding IsOpenText}"
+                                            TextColor="{Binding HexStatusGasStation}"
+                                            HorizontalTextAlignment="End"
+                                            VerticalTextAlignment="Center"/>
                                         <BoxView
                                             IsVisible="{Binding IsBoxViewVisible}"
                                             Color="LightGray"
@@ -166,6 +163,22 @@
                                                     HeightRequest="20"
                                                     Margin="0,0,5,5"
                                                     WidthRequest="20"/>
+                                                <!--<Image
+                                                    Source="{Binding ImgStatusPosto}"
+                                                    IsVisible="{Binding IsImgOpenNowVisible}"
+                                                    Grid.Row="2"
+                                                    HorizontalOptions="Start"
+                                                    HeightRequest="25"
+                                                    Margin="5,0,0,0"
+                                                    WidthRequest="25"/>
+                                                <Label 
+                                                    FontSize="13"
+                                                    Margin="30,0,0,0"
+                                                    Text="{Binding IsOpenText}"
+                                                    TextColor="{Binding HexStatusGasStation}"
+                                                    HorizontalTextAlignment="Start"
+                                                    VerticalTextAlignment="Center"
+                                                    Grid.Row="2"/>-->
                                             </Grid>
                                         </Frame>
                                     </Grid>

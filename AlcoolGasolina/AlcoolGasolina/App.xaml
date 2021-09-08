@@ -24,7 +24,8 @@
 
         <Style x:Key="ValidationMessage" TargetType="Label">
             <Setter Property="FontSize" Value="Micro"/>
-            <Setter Property="FontAttributes" Value="Italic"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="Red"/>
         </Style>
 
         <!-- Implicit styles -->

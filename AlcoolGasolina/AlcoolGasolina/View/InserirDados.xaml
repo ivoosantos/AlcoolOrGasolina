@@ -13,18 +13,40 @@
     
     <ContentPage.Content>
         <ScrollView
+            Padding="10"
             BackgroundColor="White">
-            <StackLayout 
-                Spacing="0" 
-                Margin="10">
-                <Label 
-                    Text="Inserir as informações" Style="{StaticResource LabelPreto}"
-                    HorizontalOptions="Center"
-                    FontSize="24" />
+            <Grid 
+                VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image
+                    Margin="0,0,0,50"
+                    BackgroundColor="Transparent"
+                    Source="posto_gasolina.jpg" 
+                    WidthRequest="150"
+                    HeightRequest="150"
+                    Grid.Row="0"/>
                 <Label
                     Text="Valor do Álcool" 
+                    Grid.Row="1"
                     Style="{StaticResource LabelPreto}"/>
                 <Entry 
+                    Grid.Row="2"
                     Keyboard="Numeric"
                     x:Name="Alcool"
                     Placeholder="R$ 0.000,00" 
@@ -34,21 +56,28 @@
                     </Entry.Behaviors>
                 </Entry>
                 <Label 
+                    Grid.Row="3"
                     x:Name="AlcoolMsg"
+                    Margin="2.5,-10,0,0"
                     Style="{StaticResource ValidationMessage}" 
+                    TextColor="Red"
                     Text="O campo álcool é obrigatório."/>
                 <Label 
+                    Grid.Row="4"
                     Text="Quantos Km o carro faz com 1Lt de Álcool?"
                     Style="{StaticResource LabelPreto}"/>
                 <Entry 
+                    Grid.Row="5"
                     Keyboard="Numeric" 
                     x:Name="KmViagemA" 
                     Placeholder="Digite"
                     Text="{Binding KmAlcool}" />
                 <Label 
+                    Grid.Row="6"
                     Text="Valor da Gasolina"
                     Style="{StaticResource LabelPreto}"/>
                 <Entry 
+                    Grid.Row="7"
                     Keyboard="Numeric" 
                     x:Name="Gasolina"
                     Placeholder="R$ 0.000,00" 
@@ -58,30 +87,39 @@
                     </Entry.Behaviors>
                 </Entry>
                 <Label 
+                    Margin="2.5,-10,0,0"
+                    Grid.Row="8"
                     x:Name="GasolinaMsg" 
                     Style="{StaticResource ValidationMessage}" 
                     Text="O campo gasolina é obrigatório."/>
                 <Label 
+                    Grid.Row="9"
                     Text="Quantos Km o carro faz com 1Lt de Gasolina?"
                     Style="{StaticResource LabelPreto}"/>
                 <Entry 
+                    Grid.Row="10"
                     Keyboard="Numeric" 
                     x:Name="KmViagemG"
                     Placeholder="Digite" 
                     Text="{Binding KmGasolina}" />
                 <Label 
+                    Grid.Row="11"
                     Text="Total de Km da viagem"
                     Style="{StaticResource LabelPreto}"/>
                 <Entry 
+                    Grid.Row="12"
                     Keyboard="Numeric" 
                     x:Name="KmViagem" 
                     Placeholder="Digite" 
                     Text="{Binding TotalDaViagem}" />
                 <Label 
+                    Margin="2.5,-10,0,0"
+                    Grid.Row="13"
                     x:Name="KmViagemMsg"
                     Style="{StaticResource ValidationMessage}"
                     Text="O total de km da viagem deve ser preenchida."/>
                 <Button 
+                    Grid.Row="14"
                     Text="Calcular"
                     VerticalOptions="EndAndExpand" 
                     TextColor="WhiteSmoke" 
@@ -89,7 +127,7 @@
                     FontSize="Large"
                     BackgroundColor="#212121"
                     Command="{Binding ResultadoCommand}"/>
-            </StackLayout>
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

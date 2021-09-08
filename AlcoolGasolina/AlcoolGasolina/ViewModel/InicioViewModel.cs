@@ -5,6 +5,7 @@ using AlcoolGasolina.Model;
 using AlcoolGasolina.ViewModel;
 using Xamarin.Forms;
 using System.ComponentModel;
+using System.Threading.Tasks;
 
 namespace AlcoolGasolina.ViewModel
 {
@@ -25,7 +26,7 @@ namespace AlcoolGasolina.ViewModel
 
         private void InitializeCommand()
         {
-            BuscaPostoCommand = new Command(BuscarPosto);
+            BuscaPostoCommand = new Command(async () => await BuscarPosto());
         }
 
         public void IniciarConsulta()
@@ -34,11 +35,9 @@ namespace AlcoolGasolina.ViewModel
             ((NavigationPage)App.Current.MainPage).Navigation.PushAsync(new View.InserirDados());
         }
 
-        public void BuscarPosto()
+        public async Task BuscarPosto()
         {
-            //App.Current.MainPage = new NavigationPage((Page)Activator.CreateInstance(typeof(View.MapasView)));
-            _page.Navigation.PushAsync(new View.MapasView());
+            await _page.Navigation.PushAsync(new View.BuscarPostoView());
         }
-
     }
 }

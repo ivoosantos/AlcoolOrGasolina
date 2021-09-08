@@ -1,4 +1,5 @@
-﻿using AlcoolGasolina.Model;
+﻿using AlcoolGasolina.Interface.ViewModel;
+using AlcoolGasolina.Model;
 using App5.DependencyServices;
 using App5.Model;
 using App5.Services;
@@ -19,7 +20,7 @@ using static App5.Model.Business;
 
 namespace AlcoolGasolina.ViewModel
 {
-    public class LocaisCollectionViewModel : INotifyPropertyChanged
+    public class LocaisCollectionViewModel : ViewModelClass, INotifyPropertyChanged
     {
         Page page;
         APIConnection<Business.Root> ApiConn = new APIConnection<Business.Root>();
@@ -108,22 +109,6 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        //private Result resultSelected;
-        //public Result ResultSelected
-        //{
-        //    get { return resultSelected; }
-        //    set
-        //    {
-        //        if (resultSelected != value)
-        //        {
-        //            resultSelected = value;
-
-        //            if (value != null)
-        //                _ = GetSelectedItem(value);
-        //        }
-        //    }
-        //}
-
         private bool isLoading;
         public bool IsLoading
         {
@@ -198,20 +183,26 @@ namespace AlcoolGasolina.ViewModel
                 {
                     Locais = new ObservableCollection<Result>();
 
+                    listaResultadoPesquisa = listaResultadoPesquisa.OrderByDescending(x => x.opening_hours != null && x.opening_hours.open_now)
+                        .ThenByDescending(x => x.opening_hours != null && !x.opening_hours.open_now).ToList();
+
+                    if (listaResultadoPesquisa == null || !listaResultadoPesquisa.Any())
+                    {
+                        listaResultadoPesquisa = root.results;
+                    }
+
                     foreach (var item in listaResultadoPesquisa)
                     {
-                        item.ImgSource = "arrow_down.png";
-                        item.IsBoxViewVisible = true;
-
-                        Locais.Add(item);
+                        var resultFormatter = ResultFormatter(item);
+                        Locais.Add(resultFormatter);
                     }
-                        
-                        
+
                     locaisLista = Locais.ToList();
 
-                    CallToastMessage($"Total de: {Locais.Count} postos encontrados!");
+                    CallToastMessage($"{Locais.Count} postos encontrados.");
                 }
                 else
+
                 {
                     await page.DisplayAlert("Alerta", "Não foi encontrado nenhum posto!", "Ok");
                 }
@@ -223,9 +214,21 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        public void ValueChangedViewModel(double value)
+        private Result ResultFormatter(Result item)
         {
-            SliderValue = value;
+            item.ImgSource = "arrow_down.png";
+            item.IsBoxViewVisible = true;
+            item.IsImgOpenNowVisible = item.opening_hours == null ? false : true;
+            item.IsOpenText = item.opening_hours == null ? string.Empty : item.IsOpenText;
+            item.HexStatusGasStation = item.opening_hours != null && item.opening_hours.open_now ? "#008000" : "#FF0000";
+
+            if (item.opening_hours != null && !item.opening_hours.open_now)
+            {
+                item.IsOpenText = "Fechado";
+                item.ImgStatusPosto = "red_clock_icon.png";
+            }
+               
+            return item;
         }
 
         public async Task GoToMap(Result value)
@@ -270,6 +273,8 @@ namespace AlcoolGasolina.ViewModel
             {
                 if (string.IsNullOrEmpty(text))
                 {
+                    Locais = new ObservableCollection<Result>();
+
                     foreach (var value in locaisLista)
                         Locais.Add(value);
 
@@ -288,6 +293,7 @@ namespace AlcoolGasolina.ViewModel
             }
             catch (Exception ex)
             {
+                ExceptionHandler(page);
                 Debug.WriteLine(ex.Message);
             }
         }
@@ -300,6 +306,11 @@ namespace AlcoolGasolina.ViewModel
                 InitializePicker();
                 isFirstTime = false;
             }
+        }
+
+        public override Task ExceptionHandler(Page page)
+        {
+            return base.ExceptionHandler(page);
         }
     }
 }

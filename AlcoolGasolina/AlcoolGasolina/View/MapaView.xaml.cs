@@ -13,6 +13,7 @@ using App5.Model;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using App5.DependencyServices;
+using AlcoolGasolina.Interface.ViewModel;
 
 namespace AlcoolGasolina.View
 {
@@ -68,30 +69,37 @@ namespace AlcoolGasolina.View
 
         protected override async void OnAppearing()
         {
-            IsLoading = true;
-
-            if (!DependencyService.Get<ILocation>().IsEnabled())
+            try
             {
-                await EnableLocation();
+                IsLoading = true;
 
-                isFirstTime = true;
+                if (!DependencyService.Get<ILocation>().IsEnabled())
+                {
+                    await EnableLocation();
+
+                    isFirstTime = true;
+                    IsLoading = false;
+                    return;
+                }
+
+                if (isFirstTime)
+                {
+                    await GetDeviceLocation();
+
+                    await MapLocation();
+
+                    isFirstTime = false;
+
+                }
+
                 IsLoading = false;
-                return;
-            }
 
-            if (isFirstTime)
+                base.OnAppearing();
+            }
+            catch (Exception e)
             {
-                await GetDeviceLocation();
-
-                await MapLocation();
-
-                isFirstTime = false;
-
+                Debug.WriteLine(e.Message);
             }
-
-            IsLoading = false;
-
-            base.OnAppearing();
         }
 
         private async Task MapLocation()
@@ -101,6 +109,12 @@ namespace AlcoolGasolina.View
                                 Distance.FromKilometers(1)));
 
             var result = await getLocation.GetAsync("1000");
+
+            if (!result.results.Any())
+            {
+                await DisplayAlert("Atenção", "Nenhum posto encontrado!", "Ok");
+                return;
+            }
 
             foreach (var item in result.results)
             {
@@ -113,6 +127,8 @@ namespace AlcoolGasolina.View
 
                 Map.Pins.Add(pin);
             }
+
+            //CallToastMessage($"{Map.Pins.Count} postos próximos a você.");
         }
 
         private async Task EnableLocation()
@@ -122,6 +138,15 @@ namespace AlcoolGasolina.View
             {
                 await DependencyService.Get<ILocation>().OpenSettings();
             }
+        }
+
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+        }
+
+        public void CallToastMessage(string message)
+        {
+            DependencyService.Get<IToastMessage>().ShowMessage(message);
         }
     }
 }
