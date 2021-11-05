@@ -78,12 +78,12 @@ namespace AlcoolGasolina.ViewModel
                     },
                     new Result
                     {
-                        name = "Posto Shell",
+                        name = "Posto Ipiranga",
                         vicinity = "Rua Dr. Edmundo Bitencourt, 2392"
                     },
                     new Result
                     {
-                        name = "Posto Shell",
+                        name = "Posto Ale",
                         vicinity = "Rua Dr. Edmundo Bitencourt, 2"
                     },
                     new Result
@@ -93,7 +93,7 @@ namespace AlcoolGasolina.ViewModel
                     },
                     new Result
                     {
-                        name = "Posto Shell",
+                        name = "Posto Ipiranga",
                         vicinity = "Rua Dr. Edmundo Bitencourt, 56"
                     },
                     new Result
@@ -103,12 +103,12 @@ namespace AlcoolGasolina.ViewModel
                     },
                     new Result
                     {
-                        name = "Posto Shell",
+                        name = "Posto BR",
                         vicinity = "Rua Dr. Edmundo Bitencourt, 70"
                     },
                     new Result
                     {
-                        name = "Posto Shell",
+                        name = "Posto Ale",
                         vicinity = "Rua Dr. Edmundo Bitencourt, 500"
                     },
                     new Result
@@ -136,6 +136,7 @@ namespace AlcoolGasolina.ViewModel
                         Locais.Add(resultFormatter);
                     }
 
+                    filterHandlerList = Locais.ToList();
                     IsLocaisVisible = true;
                 }
                 else
@@ -146,14 +147,19 @@ namespace AlcoolGasolina.ViewModel
 
                 CallToastMessage($"{Locais.Count} postos encontrados.");
 
-                var popUpPage = new PostosPopupView(Locais);
-                await PopupNavigation.Instance.PushAsync(popUpPage);
+                await CallPopupPage();
             }
             catch (Exception ex)
             {
                 await Page.DisplayAlert("Atenção", "Algo deu errado, tente novamente mais tarde!", "Ok");
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        private async Task CallPopupPage()
+        {
+            var popUpPage = new PostosPopupView(Locais, filterHandlerList);
+            await PopupNavigation.Instance.PushAsync(popUpPage);
         }
 
         public override async Task GetDeviceLocation()

@@ -18,10 +18,10 @@ namespace AlcoolGasolina.View
     public partial class ProcurarPostoViagemView : ContentPage
     {
         ProcurarPostoViagemViewModel procurarPostoViagemViewModel;
-        public ProcurarPostoViagemView(ObservableCollection<Result> Locais)
+        public ProcurarPostoViagemView(ObservableCollection<Result> locais, List<Result> filterHandlerList)
         {
             InitializeComponent();
-            procurarPostoViagemViewModel = new ProcurarPostoViagemViewModel(this, Locais);
+            procurarPostoViagemViewModel = new ProcurarPostoViagemViewModel(this, locais, filterHandlerList);
 
             BindingContext = procurarPostoViagemViewModel;
         }

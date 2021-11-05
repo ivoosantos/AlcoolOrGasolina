@@ -28,7 +28,6 @@ namespace AlcoolGasolina.ViewModel
     public class LocaisCollectionViewModel : SearchPostoViewModelBase
     {
         private readonly Origin Origin;
-        private List<Result> locaisLista = null;
         private int LastCount { get; set;  }
         public ICommand PesquisarClickCommand { get; set; }
 
@@ -118,7 +117,7 @@ namespace AlcoolGasolina.ViewModel
                 Locais.Add(result);
             }
 
-            locaisLista = Locais.ToList();
+            filterHandlerList = Locais.ToList();
             CallToastMessage($"{Locais.Count} postos salvos!");
         }
 
@@ -155,7 +154,7 @@ namespace AlcoolGasolina.ViewModel
                         Locais.Add(resultFormatter);
                     }
 
-                    locaisLista = Locais.ToList();
+                    filterHandlerList = Locais.ToList();
 
                     CallToastMessage($"{Locais.Count} postos encontrados.");
                 }

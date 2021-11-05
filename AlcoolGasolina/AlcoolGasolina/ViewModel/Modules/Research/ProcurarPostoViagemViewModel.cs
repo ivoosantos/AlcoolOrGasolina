@@ -32,10 +32,11 @@ namespace AlcoolGasolina.ViewModel
             }
         }
 
-        public ProcurarPostoViagemViewModel(Page page, ObservableCollection<Result> Locais)
+        public ProcurarPostoViagemViewModel(Page page, ObservableCollection<Result> locais, List<Result> filterHandlerList)
         {
             Page = page;
-            this.Locais = Locais;
+            Locais = locais;
+            this.filterHandlerList = filterHandlerList;
         }
 
         public async void UpdateFavoriteItem(Result result)

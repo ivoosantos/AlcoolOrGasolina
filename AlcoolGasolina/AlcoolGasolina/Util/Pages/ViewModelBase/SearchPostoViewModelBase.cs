@@ -16,7 +16,7 @@ namespace AlcoolGasolina.Util.BaseClasses
 {
     public class SearchPostoViewModelBase : ViewModelBase<Business.Root, PostoModel>
     {
-        private readonly List<Result> locaisLista = null;
+        public List<Result> filterHandlerList = null;
         public List<PostoModel> ListaPostos = null;
 
         public string latitude { get; set; }
@@ -201,7 +201,7 @@ namespace AlcoolGasolina.Util.BaseClasses
                 {
                     Locais = new ObservableCollection<Result>();
 
-                    foreach (var value in locaisLista)
+                    foreach (var value in filterHandlerList)
                         Locais.Add(value);
 
                     return;
@@ -209,7 +209,7 @@ namespace AlcoolGasolina.Util.BaseClasses
 
                 Locais = new ObservableCollection<Result>();
 
-                var filteredItems = locaisLista.Where(x => x.name.ToUpperInvariant().Contains(text.ToUpperInvariant())).ToList();
+                var filteredItems = filterHandlerList.Where(x => x.name.ToUpperInvariant().Contains(text.ToUpperInvariant())).ToList();
 
                 foreach (var value in filteredItems)
                 {
