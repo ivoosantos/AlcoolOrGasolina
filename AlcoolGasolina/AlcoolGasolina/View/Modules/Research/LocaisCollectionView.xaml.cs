@@ -1,4 +1,4 @@
-﻿using AlcoolGasolina.Interface.ViewModel;
+﻿using AlcoolGasolina.Util.BaseClasses;
 using AlcoolGasolina.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -17,10 +17,10 @@ namespace AlcoolGasolina.View
     {
         LocaisCollectionViewModel locaisListViewModel;
 
-        public LocaisCollectionView()
+        public LocaisCollectionView(Origin origin)
         {
             InitializeComponent();
-            locaisListViewModel = new LocaisCollectionViewModel(this);
+            locaisListViewModel = new LocaisCollectionViewModel(this, origin);
             BindingContext = locaisListViewModel;
         }
 
@@ -39,25 +39,7 @@ namespace AlcoolGasolina.View
 
             if (cView.SelectedItem != null)
             {
-                Result item = FindItem(ResultSelected);
-
-                int index = FindIndex(item);
-
-                if (!((Result)cView.SelectedItem).IsSelected)
-                {
-                    item.IsSelected = true;
-                    item.IsBoxViewVisible = false;
-                    item.ImgSource = "arrow_up.png";
-                    locaisListViewModel.Locais[index] = item;
-                }
-                else
-                {
-                    item.IsSelected = false;
-                    item.IsBoxViewVisible = true;
-                    item.ImgSource = "arrow_down.png";
-                    locaisListViewModel.Locais[index] = item;
-                }
-
+                locaisListViewModel.SelectedItem = ResultSelected;
                 cView.SelectedItem = null;
             }
         }
@@ -80,17 +62,19 @@ namespace AlcoolGasolina.View
             picker.Focus();
         }
 
-        Result FindItem(Result result)
+        private void FavoriteItemHandler_Clicked(object sender, EventArgs e)
         {
-            var itemResult = locaisListViewModel.Locais.Where(x => x.place_id == result.place_id).FirstOrDefault();
-            return itemResult;
-        }
+            try
+            {
+                ImageButton imageButton = sender as ImageButton;
+                Result result = (Result)imageButton.BindingContext;
 
-        int FindIndex(Result result)
-        {
-            var item = locaisListViewModel.Locais.Where(x => x.place_id == result.place_id).FirstOrDefault();
-            int index = locaisListViewModel.Locais.IndexOf(item);
-            return index;
+                locaisListViewModel.FavoriteClickHandler(result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

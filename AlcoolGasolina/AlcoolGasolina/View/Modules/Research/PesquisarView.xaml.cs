@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlcoolGasolina.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,15 @@ using Xamarin.Forms.Xaml;
 namespace AlcoolGasolina.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BuscarPostoView : TabbedPage
+    public partial class PesquisarView : ContentPage
     {
-        public BuscarPostoView()
+        PesquisarViewModel pesquisarViewModel = null;
+
+        public PesquisarView()
         {
             InitializeComponent();
+            pesquisarViewModel = new PesquisarViewModel(this);
+            BindingContext = pesquisarViewModel;
         }
     }
 }

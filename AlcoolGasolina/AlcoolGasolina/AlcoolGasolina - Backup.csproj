@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="View\Modules\Research\ProcurarPostoViagemView.xaml.cs">
+    <Compile Update="View\ProcurarPostoViagemView.xaml.cs">
       <DependentUpon>ProcurarPostoViagemView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -42,10 +42,10 @@
     <EmbeddedResource Update="View\Inicio.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Calculation\InserirDados.xaml">
+    <EmbeddedResource Update="View\InserirDados.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Research\LocaisCollectionView.xaml">
+    <EmbeddedResource Update="View\LocaisCollectionView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\MapaView.xaml">
@@ -54,16 +54,16 @@
     <EmbeddedResource Update="View\Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Research\PesquisarView.xaml">
+    <EmbeddedResource Update="View\PesquisarView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Research\PostosPopupView.xaml">
+    <EmbeddedResource Update="View\PostosPopupView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Calculation\Resultado.xaml">
+    <EmbeddedResource Update="View\Resultado.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Calculation\ResultCombNormal.xaml">
+    <EmbeddedResource Update="View\ResultCombNormal.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\TabbedPages\BuscarPostoTabbedPage.xaml">
@@ -72,10 +72,10 @@
     <EmbeddedResource Update="View\TabbedPages\ViagemTabbedPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Calculation\UmCombustivel.xaml">
+    <EmbeddedResource Update="View\UmCombustivel.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Modules\Research\ProcurarPostoViagemView.xaml">
+    <EmbeddedResource Update="View\ProcurarPostoViagemView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

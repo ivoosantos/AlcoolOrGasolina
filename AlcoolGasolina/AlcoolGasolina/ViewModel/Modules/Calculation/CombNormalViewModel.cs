@@ -103,7 +103,6 @@ namespace AlcoolGasolina.ViewModel
             ValorCombustivel = Decimal.Parse(Armazenamento.ValorCombustivel.ToString("F", CultureInfo.GetCultureInfo("pt-BR")));
 
             MessageCombustivel = "R$ " + ValorCombustivel;
-            //MessageCompensa = "Este é o valor que você \n vai gastar para sua viagem!";
         }
 
         public void NovaConsulta()

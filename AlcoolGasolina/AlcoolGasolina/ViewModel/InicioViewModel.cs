@@ -6,6 +6,7 @@ using AlcoolGasolina.ViewModel;
 using Xamarin.Forms;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using AlcoolGasolina.View.TabbedPages;
 
 namespace AlcoolGasolina.ViewModel
 {
@@ -37,7 +38,7 @@ namespace AlcoolGasolina.ViewModel
 
         public async Task BuscarPosto()
         {
-            await _page.Navigation.PushAsync(new View.BuscarPostoView());
+            await _page.Navigation.PushAsync(new BuscarPostoTabbedPage());
         }
     }
 }

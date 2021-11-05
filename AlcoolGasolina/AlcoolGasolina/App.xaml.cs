@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AlcoolGasolina.Businness;
+using AlcoolGasolina.Businness.Interfaces;
+using AlcoolGasolina.Database.Data;
+using System;
+using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,14 +10,32 @@ namespace AlcoolGasolina
 {
     public partial class App : Application
     {
+        static PostoDataBase postoDatabase;
+
+        public static PostoDataBase PostoDatabase
+        {
+            get
+            {
+                if (postoDatabase == null)
+                {
+                    postoDatabase = new PostoDataBase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PostoDataBase.db3"));
+                }
+
+                return postoDatabase;
+            }
+        }
+
         public App()
         {
             InitializeComponent();
-
-            Sharpnado.Tabs.Initializer.Initialize(false, false);
-            Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
-
+            Injection();
             MainPage = new View.Menu();
+        }
+
+        private void Injection()
+        {
+            DependencyService.Register<ILocaisCollectionBussinness, LocaisCollectionBusinness>();
+            DependencyService.Register<IProcurarPostoViagemBusinness, ProcurarPostoViagemBusinness>();
         }
 
         protected override void OnStart()

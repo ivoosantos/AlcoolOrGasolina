@@ -13,7 +13,6 @@ using App5.Model;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using App5.DependencyServices;
-using AlcoolGasolina.Interface.ViewModel;
 
 namespace AlcoolGasolina.View
 {
@@ -85,28 +84,28 @@ namespace AlcoolGasolina.View
                 if (isFirstTime)
                 {
                     await GetDeviceLocation();
-
                     await MapLocation();
-
                     isFirstTime = false;
 
                 }
-
-                IsLoading = false;
-
                 base.OnAppearing();
             }
             catch (Exception e)
             {
+                await DisplayAlert("Atenção", "Ocorreu um erro inesperado, tente novamente mais tarde.", "Ok");
                 Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                IsLoading = false;
             }
         }
 
         private async Task MapLocation()
         {
             Map.MoveToRegion(MapSpan.FromCenterAndRadius(
-                                new Position(double.Parse(latitude), double.Parse(longitude)),
-                                Distance.FromKilometers(1)));
+                             new Position(double.Parse(latitude), double.Parse(longitude)),
+                             Distance.FromKilometers(1)));
 
             var result = await getLocation.GetAsync("1000");
 

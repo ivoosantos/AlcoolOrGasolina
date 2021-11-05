@@ -78,6 +78,8 @@ namespace App5.Model
             public bool IsImgOpenNowVisible { get; set; } = true;
             public string IsOpenText { get; set; } = "Aberto";
             public string HexStatusGasStation { get; set; }
+            public bool IsFavorite { get; set; }
+            public string ImageSourceName { get; set; } = "no_favorite.png";
         }
 
         public class Root

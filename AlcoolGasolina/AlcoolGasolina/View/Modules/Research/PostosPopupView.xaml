@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="AlcoolGasolina.View.PostosPopupView"
+                 xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+                       PositionIn="Top"
+                        PositionOut="Top"
+                        ScaleIn="1.2"
+                        ScaleOut="1.2"
+                        DurationIn="400"
+                        DurationOut="400"
+                        EasingIn="SinOut"
+                        EasingOut="SinIn"/>
+    </pages:PopupPage.Animation>
+    <Frame
+        CornerRadius="5"
+        BorderColor="Black"
+        HeightRequest="550"
+        Margin="5,0,5,0"
+        VerticalOptions="End"
+        BackgroundColor="White">
+        <Grid 
+            Margin="0,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout
+                    IsVisible="{Binding IsLocaisVisible}"
+                    Margin="0,0,0,0"
+                    Grid.Row="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <SearchBar
+                            Grid.Row="0"
+                            Margin="0,10,40,0"
+                            TextColor="Black"
+                            Placeholder="Pesquisar"
+                            PlaceholderColor="Black"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding SearchBarTxtValue}"/>
+                </Grid>
+            </StackLayout>
+            <Grid
+                IsVisible="{Binding IsLocaisVisible}"
+                Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <CollectionView
+                        VerticalScrollBarVisibility="Always"
+                        SelectionMode="Single"
+                        Grid.Row="0"
+                        ItemsSource="{Binding Locais}"
+                        SelectionChanged="CollectionView_SelectionChanged">
+                    <CollectionView.ItemsLayout>
+                        <GridItemsLayout 
+                                    Orientation="Vertical"
+                                    Span="2" />
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Margin="0,0,0,0"
+                                      Padding="5">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup Name="CommonStates">
+                                        <VisualState Name="Normal" />
+                                        <VisualState 
+                                                Name="Selected">
+                                            <VisualState.Setters>
+                                                <Setter 
+                                                        Property="BackgroundColor"
+                                                        Value="White" />
+                                            </VisualState.Setters>
+                                        </VisualState>
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+                                <pancake:PancakeView
+                                        BorderColor="Black"
+                                        Padding="10"
+                                        HasShadow="False"
+                                        CornerRadius="5"
+                                        BackgroundColor="#f0f1f5">
+                                    <pancake:PancakeView.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="FavoriteItemHandler_Clicked"/>
+                                    </pancake:PancakeView.GestureRecognizers>
+                                    <Grid
+                                        Margin="0,15,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="Auto"/>
+                                        </Grid.RowDefinitions>
+                                        <Image 
+                                            Source="gas_black_no_circle.png"
+                                            HeightRequest="40"
+                                            WidthRequest="40"
+                                            HorizontalOptions="Start"
+                                            Margin="0,0,0,10"
+                                            VerticalOptions="Center"/>
+                                        <Label 
+                                            HorizontalTextAlignment="Start"
+                                            VerticalTextAlignment="Center"
+                                            CharacterSpacing="1"
+                                            Margin="50,0,0,10"
+                                            FontAttributes="Bold"
+                                            Text="{Binding name}"
+                                            FontSize="15"
+                                            TextColor="Black"/>
+                                        <Label
+                                            Grid.Row="1"
+                                            Text="Endereço"
+                                            HorizontalTextAlignment="Start"
+                                            VerticalTextAlignment="Center"
+                                            FontAttributes="Bold"
+                                            CharacterSpacing="1"
+                                            TextColor="Black"/>
+                                        <Label 
+                                            Margin="0,0,0,0"
+                                            CharacterSpacing="1"
+                                            Text="{Binding vicinity}"
+                                            TextColor="Black"
+                                            HorizontalTextAlignment="Start"
+                                            VerticalTextAlignment="Center"
+                                            Grid.Row="2"/>
+                                        <ImageButton
+                                            Clicked="FavoriteItemHandler_Clicked"
+                                            Grid.Row="2"
+                                            Source="{Binding ImageSourceName}"
+                                            BackgroundColor="Transparent"
+                                            HeightRequest="50"
+                                            WidthRequest="50"
+                                            Margin="0,0,-10,-10"
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="End"/>
+                                    </Grid>
+                                </pancake:PancakeView>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </Grid>
+    </Frame>
+</pages:PopupPage>

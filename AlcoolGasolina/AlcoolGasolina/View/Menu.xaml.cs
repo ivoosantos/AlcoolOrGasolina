@@ -1,4 +1,5 @@
 ﻿using AlcoolGasolina.Model;
+using AlcoolGasolina.View.TabbedPages;
 using App5.DependencyServices;
 using Rg.Plugins.Popup.Services;
 using System;
@@ -45,13 +46,18 @@ namespace AlcoolGasolina.View
                 {
                     Title = "Buscar Posto",
                     Icon = "Map.png"
+                },
+                new ItemMenuLateral()
+                {
+                    Title = "Viagem",
+                    Icon = "travel_icon.png"
                 }
             };
 
             listview.ItemsSource = MenuLateral;
         }
 
-        private async void listview_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void listview_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             ItemMenuLateral item = e.Item as ItemMenuLateral;
 
@@ -73,17 +79,15 @@ namespace AlcoolGasolina.View
                     break;
 
                 case "Buscar Posto":
-                    Detail = new NavigationPage(new BuscarPostoView());
+                    Detail = new NavigationPage(new BuscarPostoTabbedPage());
+                    IsPresented = false;
+                    break;
+
+                case "Viagem":
+                    Detail = new NavigationPage(new ViagemTabbedPage());
                     IsPresented = false;
                     break;
             }
-        }
-
-        private void GoConfig(object sender, System.EventArgs e)
-        {
-            DisplayAlert("Atenção!", "Página em construção...", "OK");
-            //Detail.Navigation.PushAsync(new View.Gasolina());
-            IsPresented = false;
         }
     }
 }

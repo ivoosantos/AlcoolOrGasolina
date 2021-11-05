@@ -16,7 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
 
-[assembly: ExportRenderer(typeof(BuscarPostoView), typeof(MyTabbedPageRenderer))]
+[assembly: ExportRenderer(typeof(TabbedPage), typeof(MyTabbedPageRenderer))]
 namespace AlcoolGasolina.Droid
 {
     [Obsolete]

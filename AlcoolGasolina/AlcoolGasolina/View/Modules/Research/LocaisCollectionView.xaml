@@ -117,6 +117,15 @@
                                             HeightRequest="25"
                                             Margin="0,0,20,10"
                                             WidthRequest="25"/>
+                                        <ImageButton
+                                            Clicked="FavoriteItemHandler_Clicked"
+                                            Source="favorite_green.png"
+                                            IsVisible="{Binding IsImageFavoritoVisible}"
+                                            BackgroundColor="Transparent"
+                                            HeightRequest="50"
+                                            Margin="0,0,20,0"
+                                            WidthRequest="50"
+                                            HorizontalOptions="End"/>
                                         <Label 
                                             FontSize="13"
                                             Margin="0,0,45,10"
@@ -204,13 +213,15 @@
                         IsRunning="{Binding IsLoading}"
                         Color="White"/>
 
-            <ImageButton Source="add_km_icon.png"
-                         HeightRequest="25"
-                         WidthRequest="25"
-                        BackgroundColor="Transparent"
-                        AbsoluteLayout.LayoutFlags="PositionProportional"  
-                        AbsoluteLayout.LayoutBounds=".95,.95,55,80"
-                         Clicked="ImageButton_Clicked_1"/>
+            <ImageButton 
+                    Source="add_km_icon.png"
+                    HeightRequest="25"
+                    WidthRequest="25"
+                    IsVisible="{Binding IsImgKmVisible}"
+                    BackgroundColor="Transparent"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"  
+                    AbsoluteLayout.LayoutBounds=".95,.95,55,80"
+                    Clicked="ImageButton_Clicked_1"/>
         </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
